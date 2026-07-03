@@ -1,29 +1,80 @@
 // ═══════════════════════════════════════════════════════════════
-//  DATI VIAGGIO — Creta 7-22 luglio 2025
+//  DATI VIAGGIO — Creta 7-22 luglio 2026
 //  Base: Lagada Bay Resort (tra Makrigialos e Goudouras)
 // ═══════════════════════════════════════════════════════════════
 
-export const TRIP_START = new Date(2025, 6, 7); // 7 luglio
+export const TRIP_START = new Date(2026, 6, 7); // 7 luglio
 
 export const days = [
   {
-    id: "day01",
-    date: "2025-07-07",
+    id: "day00",
+    date: "2026-07-06",
     label: "Lun",
+    title: "Vigilia partenza",
+    emoji: "📋",
+    type: "vicino",
+    distanza: null,
+    activities: [
+      {
+        id: "d00a01",
+        name: "✈️ Check-in online Wizz Air",
+        tag: "logistica",
+        desc: "Check-in online apre 24h prima — farlo oggi per entrambi i voli",
+        detail: "Il check-in online di Wizz Air apre 24 ore prima della partenza. Volo W46439 MXP→HER: partenza domani 7 lug ore 05:30, quindi il check-in apre oggi 6 lug alle 05:30. Prenotazione: GPY5KQ. Fare check-in per tutti e 3 i passeggeri: Stefano Dolcini, Leidy Paola Medrano Emiliani, Sophia Dolcini.",
+        tips: ["Andare su wizzair.com o app Wizz Air", "Codice prenotazione: GPY5KQ", "Stefano: scegliere il posto (bagaglio stiva 20kg incluso)", "Leidy e Sophia: solo oggetto personale incluso — bagaglio a mano e stiva NON inclusi", "Scaricare le carte d'imbarco sul telefono"],
+        mapsUrl: "https://wizzair.com",
+        mapsLabel: "Wizz Air — Check-in online"
+      },
+      {
+        id: "d00a02",
+        name: "🐶 Lascia Axel alla pensione — Centro Cinofilo della Viola",
+        tag: "logistica",
+        desc: "Portare Axel al Centro Cinofilo della Viola prima della partenza",
+        detail: "Centro Cinofilo della Viola, Via Giacomo Leopardi 94, 20010 Marcallo con Casone (MI). Tel pensione: 320 708 8140. Orari: Lun–Sab 08:00–12:00 e 15:00–18:30. Sito: centrocinofilodellaviola.org",
+        tips: ["Portare il libretto sanitario di Axel", "Portare il suo cibo se ha una dieta specifica", "Confermare la data di ritiro: 22 luglio 2026"],
+        mapsUrl: "https://www.google.com/maps/dir//Via+Giacomo+Leopardi,+94,+20010+Marcallo+con+Casone+MI",
+        mapsLabel: "Centro Cinofilo della Viola"
+      }
+    ]
+  },
+  {
+    id: "day01",
+    date: "2026-07-07",
+    label: "Mar",
     title: "Arrivo a Creta",
     emoji: "🛬",
     type: "vicino",
     distanza: null,
     activities: [
       {
+        id: "d01a00",
+        name: "✈️ Volo andata — W46439",
+        tag: "logistica",
+        desc: "Wizz Air W46439 · Milano MXP → Heraklion HER · 05:30–09:15",
+        detail: "Volo diretto Wizz Air Malta, durata 2h 45min. Partenza da Milano Malpensa (MXP) ore 05:30, arrivo Heraklion (HER) ore 09:15. Prenotazione: GPY5KQ · Volo numero W46439.",
+        tips: ["Presentarsi in aeroporto almeno 2h prima (ore 03:30)", "Stefano: 1 bagaglio in stiva 20kg incluso", "Leidy e Sophia: solo oggetto personale (sotto al sedile), bagaglio a mano NON incluso", "Check-in online su Wizz Air prima della partenza"],
+        mapsUrl: "https://maps.google.com/?q=Milano+Malpensa+Airport",
+        mapsLabel: "Aeroporto Malpensa MXP"
+      },
+      {
+        id: "d01a00b",
+        name: "🚗 Ritiro auto — Autocandia",
+        tag: "logistica",
+        desc: "Ritiro Peugeot 208 in aeroporto ore 10:30 · Rif. 768030983",
+        detail: "Autocandia, Kazantzakis Airport, Iraklio, Crete, 71500. Conf. 9MJF07 · Numero volo da mostrare: WMT6439. Peugeot 208 o similare, cambio manuale, km illimitati, assicurazione inclusa. Deposito cauzionale: 700€ (carta di credito fisica MasterCard/Visa, no prepagata). Riconsegna: mer 22 lug ore 20:30 stesso luogo.",
+        tips: ["Esci dall'edificio Arrivi e attraversa la strada a destra", "Accanto alla stazione degli autobus, sali i gradini verso il parcheggio", "Portare: patente fisica, voucher stampato, carta di credito con sufficiente plafond", "Restituire con serbatoio allo stesso livello del ritiro", "Tel. Autocandia: +302814260270"],
+        mapsUrl: "https://maps.google.com/?q=Heraklion+Airport+Crete",
+        mapsLabel: "Aeroporto Heraklion — Autocandia"
+      },
+      {
         id: "d01a01",
-        name: "Sistemazione appartamento",
+        name: "🏨 Check-in Lagada Resort",
         tag: "relax",
-        desc: "Check-in al Lagada Bay Resort, orientamento e prime ore di relax.",
-        detail: "Il Lagada Bay Resort si trova nella baia di Lagada, a circa 2,5 km da Makrigialos. Rooftop con jacuzzi, piscina con vista mare. Richiedi la stanza con vista sul Mar Libico.",
-        tips: ["Fai il check-in prima possibile per avere tutto il pomeriggio libero", "Chiedi alla reception le taverne consigliate in zona"],
-        mapsUrl: "https://maps.google.com/?q=Lagada+Bay+Resort+Makrigialos+Crete",
-        mapsLabel: "Lagada Bay Resort"
+        desc: "Check-in ore 15:00–23:00 · Conf. 5980.580.483 · PIN 8557",
+        detail: "Lagada Resort, 1 km Makrigialos–Goudouras, Makrigialos 72055. Appartamento con vista piscina e mare, 2 adulti + 1 bambino (8 anni). Check-in: 15:00–23:00. Check-out: 22 lug 08:00–11:00. Tel: +30 694 848 6850. GPS: N 035°1.804, E 26°0.125.",
+        tips: ["Avvisare il resort dell'orario di arrivo previsto (verranno prima delle 15:00 dall'aeroporto)", "Parcheggio privato gratuito on site", "WiFi gratuita in tutte le aree", "Prenotare online su Booking.com per modifiche: conf. 5980.580.483"],
+        mapsUrl: "https://maps.google.com/?q=N+35.030067,+E+26.002083",
+        mapsLabel: "Lagada Resort"
       },
       {
         id: "d01a02",
@@ -59,7 +110,7 @@ export const days = [
   },
   {
     id: "day02",
-    date: "2025-07-08",
+    date: "2026-07-08",
     label: "Mar",
     title: "Xerokampos",
     emoji: "🏖",
@@ -90,7 +141,7 @@ export const days = [
   },
   {
     id: "day03",
-    date: "2025-07-09",
+    date: "2026-07-09",
     label: "Mer",
     title: "Kato Zakros + Palazzo Minoico",
     emoji: "🏛",
@@ -131,7 +182,7 @@ export const days = [
   },
   {
     id: "day04",
-    date: "2025-07-10",
+    date: "2026-07-10",
     label: "Gio",
     title: "Vai + Monastero di Toplou",
     emoji: "🌴",
@@ -172,7 +223,7 @@ export const days = [
   },
   {
     id: "day05",
-    date: "2025-07-11",
+    date: "2026-07-11",
     label: "Ven",
     title: "Sitia — città autentica",
     emoji: "🏘",
@@ -213,7 +264,7 @@ export const days = [
   },
   {
     id: "day06",
-    date: "2025-07-12",
+    date: "2026-07-12",
     label: "Sab",
     title: "Giornata libera",
     emoji: "☀️",
@@ -244,7 +295,7 @@ export const days = [
   },
   {
     id: "day07",
-    date: "2025-07-13",
+    date: "2026-07-13",
     label: "Dom",
     title: "Makrigialos + Koufonisi",
     emoji: "⛵",
@@ -285,7 +336,7 @@ export const days = [
   },
   {
     id: "day08",
-    date: "2025-07-14",
+    date: "2026-07-14",
     label: "Lun",
     title: "Gola di Pervolakia + Monastero di Kapsa",
     emoji: "🥾",
@@ -336,7 +387,7 @@ export const days = [
   },
   {
     id: "day09",
-    date: "2025-07-15",
+    date: "2026-07-15",
     label: "Mar",
     title: "Agios Nikolaos + Spinalonga",
     emoji: "🏝",
@@ -377,7 +428,7 @@ export const days = [
   },
   {
     id: "day10",
-    date: "2025-07-16",
+    date: "2026-07-16",
     label: "Mer",
     title: "Giornata relax",
     emoji: "🌊",
@@ -408,7 +459,7 @@ export const days = [
   },
   {
     id: "day11",
-    date: "2025-07-17",
+    date: "2026-07-17",
     label: "Gio",
     title: "Heraklion + Palazzo di Cnosso",
     emoji: "🏺",
@@ -449,7 +500,7 @@ export const days = [
   },
   {
     id: "day12",
-    date: "2025-07-18",
+    date: "2026-07-18",
     label: "Ven",
     title: "Ierapetra + isola di Chrissi",
     emoji: "🏙",
@@ -490,7 +541,7 @@ export const days = [
   },
   {
     id: "day13",
-    date: "2025-07-19",
+    date: "2026-07-19",
     label: "Sab",
     title: "Preveli — laguna e palme",
     emoji: "🌿",
@@ -531,7 +582,7 @@ export const days = [
   },
   {
     id: "day14",
-    date: "2025-07-20",
+    date: "2026-07-20",
     label: "Dom",
     title: "Gole di Samaria",
     emoji: "⛰️",
@@ -572,7 +623,7 @@ export const days = [
   },
   {
     id: "day15",
-    date: "2025-07-21",
+    date: "2026-07-21",
     label: "Lun",
     title: "Elafonissi — ultima gita",
     emoji: "🏖",
@@ -603,7 +654,7 @@ export const days = [
   },
   {
     id: "day16",
-    date: "2025-07-22",
+    date: "2026-07-22",
     label: "Mar",
     title: "Rientro",
     emoji: "✈️",
@@ -614,21 +665,31 @@ export const days = [
         id: "d16a01",
         name: "Ultima mattina a Lagada",
         tag: "relax",
-        desc: "Ultimo bagno nella spiaggia di casa.",
-        detail: "Ultima mattina: spiaggia di Lagada, ultimi acquisti, ultime foto. Goditi la calma prima del rientro.",
-        tips: ["Controlla orario di check-out dell'appartamento", "Fai la spesa di prodotti locali da portare a casa (olio, miele, formaggio)"],
+        desc: "Ultimo bagno nella spiaggia di casa. Check-out ore 08:00–11:00.",
+        detail: "Ultima mattina: spiaggia di Lagada, ultimi acquisti, ultime foto. Check-out appartamento entro le 11:00. Il volo è in serata quindi si ha tutta la giornata.",
+        tips: ["Check-out entro le 11:00 (lasciare le chiavi alla reception)", "Fai la spesa di prodotti locali da portare a casa (olio, miele, formaggio)", "Puoi lasciare i bagagli in reception dopo il check-out"],
         mapsUrl: "https://maps.google.com/?q=Lagada+Bay+Resort+Makrigialos+Crete",
         mapsLabel: "Lagada Bay Resort"
       },
       {
         id: "d16a02",
-        name: "Valigie e check-out",
-        tag: "relax",
-        desc: "Consegna appartamento e partenza per l'aeroporto.",
-        detail: "Aeroporto più vicino: Heraklion (HER) ~1h45, oppure Sitia (JSH) ~40 min se il volo parte da lì. Controlla l'aeroporto di partenza sul biglietto!",
-        tips: ["Arrivare in aeroporto almeno 2h prima", "Sitia è molto più piccolo e vicino — preferibile se hai il volo da lì"],
+        name: "🚗 Riconsegna auto — Autocandia",
+        tag: "logistica",
+        desc: "Riconsegna Peugeot 208 in aeroporto ore 20:30",
+        detail: "Riconsegna auto all'Autocandia, Kazantzakis Airport Heraklion, ore 20:30. Stessa area di ritiro. Controllare il livello del carburante prima di restituire (serbatoio allo stesso livello del ritiro). Tel: +302814260270.",
+        tips: ["Fare pieno prima di arrivare in aeroporto", "Arrivare qualche minuto prima delle 20:30", "Scattare foto all'auto prima della riconsegna per eventuali contestazioni"],
         mapsUrl: "https://maps.google.com/?q=Heraklion+Airport+Crete",
-        mapsLabel: "Aeroporto Heraklion"
+        mapsLabel: "Aeroporto Heraklion — Autocandia"
+      },
+      {
+        id: "d16a03",
+        name: "✈️ Volo ritorno — W46440",
+        tag: "logistica",
+        desc: "Wizz Air W46440 · Heraklion HER → Milano MXP · 22:10–00:10+1",
+        detail: "Volo diretto Wizz Air Malta, durata 3h. Partenza da Heraklion (HER) ore 22:10, arrivo Milano Malpensa (MXP) giovedì 23 lug ore 00:10. Prenotazione: GPY5KQ · Volo numero W46440.",
+        tips: ["⚠️ Attenzione ai tempi: riconsegna auto ore 20:30, volo ore 22:10 — solo 1h40 di margine. Presentarsi al check-in subito dopo la riconsegna", "Check-in online su Wizz Air prima della partenza per risparmiare tempo in aeroporto", "Stefano: 1 bagaglio in stiva 20kg incluso"],
+        mapsUrl: "https://maps.google.com/?q=Heraklion+Airport+Crete",
+        mapsLabel: "Aeroporto Heraklion HER"
       }
     ]
   }
