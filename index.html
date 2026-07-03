@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌊 Creta 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Firebase -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import {
+      getFirestore, doc, setDoc, getDoc, onSnapshot, collection
+    } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    // ─── CONFIGURA QUI ────────────────────────────────────────────────────────
+    const firebaseConfig = {
+      apiKey:            "AIzaSyCcGgLj3KIP-JR0YMl3u201z58uJYfLjnQ",
+      authDomain:        "creta2026-2392b.firebaseapp.com",
+      projectId:         "creta2026-2392b",
+      storageBucket:     "creta2026-2392b.firebasestorage.app",
+      messagingSenderId: "899504725524",
+      appId:             "1:899504725524:web:8c541a5347929eef01d101"
+    };
+    // ──────────────────────────────────────────────────────────────────────────
+
+    const app  = initializeApp(firebaseConfig);
+    const db   = getFirestore(app);
+    window.__db = db;
+
+    // Esponi le funzioni Firestore globalmente per il resto dell'app
+    window.__fs = { doc, setDoc, getDoc, onSnapshot, collection };
+
+    // Carica l'app solo dopo che Firebase è pronto
+    const script = document.createElement("script");
+    script.type  = "module";
+    script.src   = "src/app.js";
+    document.body.appendChild(script);
+  </script>
+</body>
+</html>
