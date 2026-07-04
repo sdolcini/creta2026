@@ -443,10 +443,10 @@ export const days = [
     ]
   },
 
-  // ── GIORNO 9 — 16 lug ────────────────────────────────────────
+  // ── GIORNO 9 — 15 lug ────────────────────────────────────────
   {
     id: "day09",
-    date: "2026-07-16",
+    date: "2026-07-165,
     label: "Gio",
     title: "Agios Nikolaos + Spinalonga",
     emoji: "🏝",
@@ -486,10 +486,10 @@ export const days = [
     ]
   },
 
-  // ── GIORNO 10 — 15 lug ───────────────────────────────────────
+  // ── GIORNO 10 — 16 lug ───────────────────────────────────────
   {
     id: "day10",
-    date: "2026-07-15",
+    date: "2026-07-16",
     label: "Mer",
     title: "Giornata relax",
     emoji: "🌊",
