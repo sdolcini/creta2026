@@ -14,7 +14,7 @@ const state = {
 // ─── FIREBASE ─────────────────────────────────────────────────────────────────
 const db  = window.__db;
 const fs  = window.__fs;
-const REF = () => fs.doc(db, 'trips', 'creta2025');
+const REF = () => fs.doc(db, 'trips', 'creta2026');
 
 async function loadFromFirebase() {
   try {
@@ -136,7 +136,7 @@ function render() {
     <header class="app-header">
       <div class="header-inner">
         <div>
-          <div class="header-title">🌊 Creta 2025</div>
+          <div class="header-title">🌊 Creta 2026</div>
           <div class="header-sub">
             <span class="sync-dot ${state.syncStatus}"></span>
             7–22 luglio · Lagada Bay Resort

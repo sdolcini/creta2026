@@ -1,4 +1,4 @@
-# 🌊 Creta 2025 — Trip Planner
+# 🌊 Creta 2026 — Trip Planner
 
 App web per la pianificazione del viaggio a Creta, 7–22 luglio 2025.  
 Base: **Lagada Bay Resort**, tra Makrigialos e Goudouras.
@@ -18,7 +18,7 @@ Base: **Lagada Bay Resort**, tra Makrigialos e Goudouras.
 ### 1. Crea un progetto Firebase
 
 1. Vai su [console.firebase.google.com](https://console.firebase.google.com)
-2. Crea un nuovo progetto (es. `creta-2025`)
+2. Crea un nuovo progetto (es. `creta-2026`)
 3. Aggiungi un'app **Web** al progetto
 4. Copia la configurazione che ti viene mostrata (`firebaseConfig`)
 
@@ -62,13 +62,13 @@ Sostituisci i valori con quelli del tuo progetto Firebase.
 
 ## Deploy su GitHub Pages
 
-1. Crea un repository su GitHub (es. `creta-2025`)
+1. Crea un repository su GitHub (es. `creta-2026`)
 2. Carica tutti i file del progetto
 3. Vai su **Settings > Pages**
 4. In **Source** seleziona **GitHub Actions**
 5. Il workflow `.github/workflows/deploy.yml` fa tutto automaticamente
 
-L'app sarà disponibile su: `https://TUO_USERNAME.github.io/creta-2025/`
+L'app sarà disponibile su: `https://TUO_USERNAME.github.io/creta-2026/`
 
 ---
 
