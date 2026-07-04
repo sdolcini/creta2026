@@ -263,6 +263,16 @@ export const days = [
       },
       {
         id: "d05a03",
+        name: "Spiaggia di Sitia o Agia Fotia",
+        tag: "mare",
+        desc: "Bagno pomeridiano prima di cena — due opzioni vicinissime.",
+        detail: "Dopo il giro di Sitia, due opzioni comode per un bagno pomeridiano: 1) Spiaggia di Sitia: lunga spiaggia sabbiosa attrezzata proprio sotto la città, comoda per un bagno veloce prima di cena. 2) Agia Fotia: ~20 minuti verso casa, spiaggia sabbiosa e più tranquilla, ottima alternativa se vuoi già avvicinarti a Lagada. Entrambe con acqua pulita e fondale basso.",
+        tips: ["La spiaggia di Sitia è attrezzata con lettini (~8€ coppia) e docce", "Agia Fotia è più selvaggia ma più silenziosa — meglio se sei stanco della città"],
+        mapsUrl: "https://maps.google.com/?q=Sitia+beach+Crete",
+        mapsLabel: "Spiaggia di Sitia"
+      },
+      {
+        id: "d05a04",
         name: "Cena fuori a Sitia",
         tag: "cena",
         desc: "Ristoranti sul porto, ottimi e a prezzi locali.",
@@ -433,42 +443,9 @@ export const days = [
     ]
   },
 
-  // ── GIORNO 9 — 15 lug ────────────────────────────────────────
+  // ── GIORNO 9 — 16 lug ────────────────────────────────────────
   {
     id: "day09",
-    date: "2026-07-15",
-    label: "Mer",
-    title: "Giornata relax",
-    emoji: "🌊",
-    type: "vicino",
-    distanza: null,
-    activities: [
-      {
-        id: "d09a01",
-        name: "Spiaggia di Votsalaki",
-        tag: "mare",
-        desc: "Spiaggia isolata e silenziosa, 500 m a ovest di Goudouras.",
-        detail: "Votsalaki è una piccola spiaggia di sassi bianchi a pochi minuti dall'appartamento, meno frequentata della spiaggia principale. Acqua cristallina, ombra naturale con qualche arbusto. Ideale per una giornata di vero riposo dopo i giorni intensi di Elafonissi e Balos.",
-        tips: ["Porta tutto: nessun servizio in loco", "Snorkeling eccellente lungo la scogliera a sinistra"],
-        mapsUrl: "https://maps.google.com/?q=Votsalaki+beach+Goudouras+Crete",
-        mapsLabel: "Spiaggia Votsalaki"
-      },
-      {
-        id: "d09a02",
-        name: "Cena fuori a Ierapetra",
-        tag: "cena",
-        desc: "La città più meridionale d'Europa · ~30 min · 26 km.",
-        detail: "Ierapetra ha ottimi ristoranti di pesce sul lungomare e nel centro storico. Prezzi meno gonfiati rispetto alle zone più turistiche. Il centro storico veneziano merita una passeggiata prima di cena: fortezza veneziana, quartiere turco, vicoli caratteristici.",
-        tips: ["Parcheggio gratuito sul lungomare", "Il vino sfuso locale (hima) è ottimo e costa pochissimo", "Evita i locali con foto plastificate sul menu"],
-        mapsUrl: "https://maps.google.com/?q=Ierapetra+taverna+restaurant+Crete",
-        mapsLabel: "Taverne Ierapetra"
-      }
-    ]
-  },
-
-  // ── GIORNO 10 — 16 lug ───────────────────────────────────────
-  {
-    id: "day10",
     date: "2026-07-16",
     label: "Gio",
     title: "Agios Nikolaos + Spinalonga",
@@ -477,7 +454,7 @@ export const days = [
     distanza: "~1h10 · 61 km",
     activities: [
       {
-        id: "d10a01",
+        id: "d09a01",
         name: "Agios Nikolaos — città e lago",
         tag: "cultura",
         desc: "Una delle città più belle dell'est Creta, lago interno collegato al mare.",
@@ -487,7 +464,7 @@ export const days = [
         mapsLabel: "Lago Voulismeni, Agios Nikolaos"
       },
       {
-        id: "d10a02",
+        id: "d09a02",
         name: "Gita in barca a Spinalonga",
         tag: "cultura",
         desc: "Ex colonia per lebbrosi, isola scenografica nel golfo di Mirabello.",
@@ -497,7 +474,7 @@ export const days = [
         mapsLabel: "Isola di Spinalonga"
       },
       {
-        id: "d10a03",
+        id: "d09a03",
         name: "Cena ad Agios Nikolaos",
         tag: "cena",
         desc: "Taverne sul lago Voulismeni — una delle cene migliori del viaggio.",
@@ -505,6 +482,39 @@ export const days = [
         tips: ["Le taverne sul lato est del lago sono mediamente migliori e meno caotiche", "Pesce fresco o dakos (bruschetta cretese) per iniziare"],
         mapsUrl: "https://maps.google.com/?q=Agios+Nikolaos+lake+restaurants+Crete",
         mapsLabel: "Ristoranti lago Agios Nikolaos"
+      }
+    ]
+  },
+
+  // ── GIORNO 10 — 15 lug ───────────────────────────────────────
+  {
+    id: "day10",
+    date: "2026-07-15",
+    label: "Mer",
+    title: "Giornata relax",
+    emoji: "🌊",
+    type: "vicino",
+    distanza: null,
+    activities: [
+      {
+        id: "d10a01",
+        name: "Spiaggia di Votsalaki",
+        tag: "mare",
+        desc: "Spiaggia isolata e silenziosa, 500 m a ovest di Goudouras.",
+        detail: "Votsalaki è una piccola spiaggia di sassi bianchi a pochi minuti dall'appartamento, meno frequentata della spiaggia principale. Acqua cristallina, ombra naturale con qualche arbusto. Ideale per una giornata di vero riposo dopo i giorni intensi di Elafonissi e Balos.",
+        tips: ["Porta tutto: nessun servizio in loco", "Snorkeling eccellente lungo la scogliera a sinistra"],
+        mapsUrl: "https://maps.google.com/?q=Votsalaki+beach+Goudouras+Crete",
+        mapsLabel: "Spiaggia Votsalaki"
+      },
+      {
+        id: "d10a02",
+        name: "Cena fuori a Ierapetra",
+        tag: "cena",
+        desc: "La città più meridionale d'Europa · ~30 min · 26 km.",
+        detail: "Ierapetra ha ottimi ristoranti di pesce sul lungomare e nel centro storico. Prezzi meno gonfiati rispetto alle zone più turistiche. Il centro storico veneziano merita una passeggiata prima di cena: fortezza veneziana, quartiere turco, vicoli caratteristici.",
+        tips: ["Parcheggio gratuito sul lungomare", "Il vino sfuso locale (hima) è ottimo e costa pochissimo", "Evita i locali con foto plastificate sul menu"],
+        mapsUrl: "https://maps.google.com/?q=Ierapetra+taverna+restaurant+Crete",
+        mapsLabel: "Taverne Ierapetra"
       }
     ]
   },
@@ -541,6 +551,16 @@ export const days = [
       },
       {
         id: "d11a03",
+        name: "Spiaggia di Amnissos o Tobruk",
+        tag: "mare",
+        desc: "Spiaggia a 10 min da Heraklion, sul tragitto di rientro verso est.",
+        detail: "Amnissos e Tobruk sono spiagge sabbiose proprio sulla strada nazionale che da Heraklion porta verso est — esattamente il percorso di rientro verso Lagada. Zero deviazione. Spiagge attrezzate, acque calme, ottime per un bagno pomeridiano prima di rimettersi in auto per il rientro. Amnissos ha anche un piccolo sito minoico sul lungomare, curiosità rapida.",
+        tips: ["Fermati tra le 15:00 e le 17:00 — il caldo peggiore è passato", "Tobruk è leggermente più tranquilla di Amnissos", "Dal parcheggio in spiaggia si riparte direttamente sulla SS verso est"],
+        mapsUrl: "https://maps.google.com/?q=Amnisos+beach+Heraklion+Crete",
+        mapsLabel: "Spiaggia Amnissos"
+      },
+      {
+        id: "d11a04",
         name: "Cena a casa",
         tag: "cena",
         desc: "Rientro in serata, cena a casa.",
@@ -584,6 +604,16 @@ export const days = [
       },
       {
         id: "d12a03",
+        name: "Spiaggia di Ierapetra (se non si fa Chrissi)",
+        tag: "mare",
+        desc: "Lunga spiaggia sabbiosa attrezzata, sotto la città. Piano B perfetto.",
+        detail: "Se la gita a Chrissi non si fa (restrizioni accesso, barche piene o semplicemente voglia di stare vicini), la spiaggia urbana di Ierapetra è un ottimo piano B: lunga, sabbiosa, attrezzata con lettini, acque calme e basse. Ideale per bambini. È a 2 minuti a piedi dal centro storico — si può abbinare al giro della città senza spostamenti.",
+        tips: ["Lettini ~8€ a coppia", "La parte est della spiaggia è più tranquilla e meno affollata", "Bar e chioschi in loco"],
+        mapsUrl: "https://maps.google.com/?q=Ierapetra+beach+Crete",
+        mapsLabel: "Spiaggia di Ierapetra"
+      },
+      {
+        id: "d12a04",
         name: "Cena a casa",
         tag: "cena",
         desc: "Serata tranquilla in appartamento.",
