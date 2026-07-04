@@ -109,6 +109,7 @@ function totalActivities() {
 }
 
 function getWeekDays(week) {
+  // week 0: gg 1-8, week 1: gg 9-16
   // week 0: primi 9 giorni (6-14 lug), week 1: restanti (15-22 lug)
   const mid = 9;
   return week === 0 ? days.slice(0, mid) : days.slice(mid);
