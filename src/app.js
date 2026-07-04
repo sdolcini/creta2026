@@ -439,7 +439,11 @@ async function init() {
   const todayDay = days.find(d => d.date === today);
   if (todayDay) {
     state.openDays[todayDay.id] = true;
-    // Imposta la settimana giusta
     const idx = days.indexOf(todayDay);
+    state.activeWeek = idx >= 9 ? 1 : 0;
   }
+
+  render();
 }
+
+init().catch(console.error);
