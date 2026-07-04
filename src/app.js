@@ -109,8 +109,9 @@ function totalActivities() {
 }
 
 function getWeekDays(week) {
-  // week 0: gg 1-8, week 1: gg 9-16
-  return days.slice(week * 8, week * 8 + 8);
+  // week 0: primi 9 giorni (6-14 lug), week 1: restanti (15-22 lug)
+  const mid = 9;
+  return week === 0 ? days.slice(0, mid) : days.slice(mid);
 }
 
 function formatDate(dateStr) {
@@ -151,7 +152,7 @@ function render() {
 
     <div class="week-tabs">
       <button class="week-tab${state.activeWeek===0?' active':''}" data-week="0">
-        7–14 lug
+        6–14 lug
       </button>
       <button class="week-tab${state.activeWeek===1?' active':''}" data-week="1">
         15–22 lug
