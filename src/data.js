@@ -706,5 +706,3 @@ export const kitesurfInfo = {
   mapsUrl: "https://maps.google.com/?q=Kouremenos+Beach+Palekastro+Crete+kitesurf",
   note: "Vento Meltemi quasi garantito ogni giorno in luglio. Noleggio attrezzatura completa (kite + tavola + harness): circa 60-80€ mezza giornata, 100-130€ giornata intera. Richiesta valutazione iniziale (~20€ scalabile). Prenotare per telefono qualche giorno prima."
 };
-re per telefono qualche giorno prima."
-};

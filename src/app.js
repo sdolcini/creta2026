@@ -440,10 +440,4 @@ async function init() {
     state.openDays[todayDay.id] = true;
     // Imposta la settimana giusta
     const idx = days.indexOf(todayDay);
-    state.activeWeek = idx < 8 ? 0 : 1;
-  }
-
-  render();
-}
-
-init();
+    
