@@ -6,6 +6,7 @@
 export const TRIP_START = new Date(2026, 6, 7); // 7 luglio
 
 export const days = [
+  // ── GIORNO 0 ─────────────────────────────────────────────────
   {
     id: "day00",
     date: "2026-07-06",
@@ -37,6 +38,8 @@ export const days = [
       }
     ]
   },
+
+  // ── GIORNO 1 — 7 lug ─────────────────────────────────────────
   {
     id: "day01",
     date: "2026-07-07",
@@ -108,21 +111,23 @@ export const days = [
       }
     ]
   },
+
+  // ── GIORNO 2 — 8 lug ─────────────────────────────────────────
   {
     id: "day02",
     date: "2026-07-08",
-    label: "Mar",
+    label: "Mer",
     title: "Xerokampos",
     emoji: "🏖",
     type: "vicino",
-    distanza: "~20 min",
+    distanza: "~40 min · 30 km",
     activities: [
       {
         id: "d02a01",
         name: "Spiagge di Xerokampos",
         tag: "mare",
         desc: "Spiaggia selvaggia, acque calme, lontana dal turismo di massa.",
-        detail: "Xerokampos è una piccola baia isolata a ovest di Goudouras, tra le più tranquille dell'est di Creta. Sabbia chiara, acqua limpida e pochissima gente. Perfetta per famiglie: fondale basso e graduale, nessuna corrente. Portarsi tutto: ombrellone, acqua, cibo.",
+        detail: "Xerokampos è una piccola baia isolata a est di Goudouras, tra le più tranquille dell'est di Creta. Sabbia chiara, acqua limpida e pochissima gente. Perfetta per famiglie: fondale basso e graduale, nessuna corrente. Portarsi tutto: ombrellone, acqua, cibo.",
         tips: ["Arrivare prima delle 10 anche se è poco frequentata, per avere il posto migliore", "Portare pranzo al sacco — non ci sono chioschi", "Lo snorkeling vicino agli scogli a sinistra è ottimo"],
         mapsUrl: "https://maps.google.com/?q=Xerokampos+beach+Crete",
         mapsLabel: "Spiaggia di Xerokampos"
@@ -132,21 +137,23 @@ export const days = [
         name: "Cena a casa",
         tag: "cena",
         desc: "Serata tranquilla, cena in appartamento.",
-        detail: "Dopo una lunga giornata al sole, cucina semplice a casa: insalata greca, formaggio, pane, olive. Ottimo momento per riposo dopo il viaggio di arrivo.",
+        detail: "Dopo una lunga giornata al sole, cucina semplice a casa: insalata greca, formaggio, pane, olive.",
         tips: [],
         mapsUrl: null,
         mapsLabel: null
       }
     ]
   },
+
+  // ── GIORNO 3 — 9 lug ─────────────────────────────────────────
   {
     id: "day03",
     date: "2026-07-09",
-    label: "Mer",
+    label: "Gio",
     title: "Kato Zakros + Palazzo Minoico",
     emoji: "🏛",
     type: "vicino",
-    distanza: "~30 min",
+    distanza: "~50 min · 40 km",
     activities: [
       {
         id: "d03a01",
@@ -180,14 +187,16 @@ export const days = [
       }
     ]
   },
+
+  // ── GIORNO 4 — 10 lug ────────────────────────────────────────
   {
     id: "day04",
     date: "2026-07-10",
-    label: "Gio",
+    label: "Ven",
     title: "Vai + Monastero di Toplou",
     emoji: "🌴",
-    type: "vicino",
-    distanza: "~45 min",
+    type: "gita",
+    distanza: "~1h15 · 65 km",
     activities: [
       {
         id: "d04a01",
@@ -221,14 +230,16 @@ export const days = [
       }
     ]
   },
+
+  // ── GIORNO 5 — 11 lug ────────────────────────────────────────
   {
     id: "day05",
     date: "2026-07-11",
-    label: "Ven",
+    label: "Sab",
     title: "Sitia — città autentica",
     emoji: "🏘",
     type: "vicino",
-    distanza: "~40 min",
+    distanza: "~30 min · 27 km",
     activities: [
       {
         id: "d05a01",
@@ -236,7 +247,7 @@ export const days = [
         tag: "cultura",
         desc: "Cittadina autentica, mercato, lungomare, porto.",
         detail: "Sitia è la città più orientale di Creta e una delle più autentiche — poco turistica. Il centro storico sale su una collina con case color pastello. Il lungomare è piacevole per passeggiare. Il museo archeologico ospita la collezione di reperti del palazzo di Zakros. La fortezza veneziana Kazarma è visitabile gratuitamente.",
-        tips: ["Il mercato settimanale c'è il sabato mattina — controlla il giorno prima", "Fai scorta: miele di timo, graviera (formaggio locale), xerotigana (dolci fritti)"],
+        tips: ["Il mercato settimanale c'è il sabato mattina — oggi è sabato!", "Fai scorta: miele di timo, graviera (formaggio locale), xerotigana (dolci fritti)"],
         mapsUrl: "https://maps.google.com/?q=Sitia+Crete+town+center",
         mapsLabel: "Centro di Sitia"
       },
@@ -262,99 +273,29 @@ export const days = [
       }
     ]
   },
+
+  // ── GIORNO 6 — 12 lug ────────────────────────────────────────
   {
     id: "day06",
     date: "2026-07-12",
-    label: "Sab",
-    title: "Giornata libera",
-    emoji: "☀️",
-    type: "vicino",
-    distanza: null,
-    activities: [
-      {
-        id: "d06a01",
-        name: "Spiaggia Lagada / Diaskari",
-        tag: "mare",
-        desc: "Spiaggia a 5 minuti dall'appartamento. Nessun programma.",
-        detail: "La spiaggia di Lagada Bay è praticamente sotto l'appartamento. Piccola, ciottolosa ma con acqua cristallina e pochissima gente. Ideale per un giorno di recupero senza organizzazione.",
-        tips: ["Taverna Diaskari Green Beach a pochi passi — pesce fresco, prezzi locali", "Porta snorkeling: i fondali rocciosi sono ricchi di pesci"],
-        mapsUrl: "https://maps.google.com/?q=Lagada+beach+Makrigialos+Crete",
-        mapsLabel: "Spiaggia Lagada"
-      },
-      {
-        id: "d06a02",
-        name: "Cena alla Taverna Diaskari",
-        tag: "cena",
-        desc: "Taverna sul mare, a piedi dall'appartamento.",
-        detail: "La Taverna Diaskari Green Beach è letteralmente a 5 minuti a piedi dal Lagada Bay Resort. Pesce fresco, vista mare, atmosfera locale. Perfetta per la serata pigra.",
-        tips: ["Meglio prenotare in alta stagione, anche solo qualche ora prima", "Chiedi il polpo alla griglia — specialità della casa"],
-        mapsUrl: "https://maps.google.com/?q=Diaskari+Green+Beach+taverna+Makrigialos",
-        mapsLabel: "Taverna Diaskari Green Beach"
-      }
-    ]
-  },
-  {
-    id: "day07",
-    date: "2026-07-13",
     label: "Dom",
-    title: "Makrigialos + Koufonisi",
-    emoji: "⛵",
-    type: "vicino",
-    distanza: "~20 min + barca",
-    activities: [
-      {
-        id: "d07a01",
-        name: "Spiaggia di Makrigialos",
-        tag: "mare",
-        desc: "Bella spiaggia sabbiosa attrezzata, 2,5 km dalla base.",
-        detail: "Makrigialos ha una delle spiagge più belle dell'est Creta: lunga, sabbiosa, con acque basse e chiare. Attrezzata con lettini e ombrelloni in affitto (circa 8-10€ a coppia). Comoda e sicura per bambini.",
-        tips: ["Ottima base per mattina prima di eventuale gita a Koufonisi", "I lettini si prenotano arrivando presto"],
-        mapsUrl: "https://maps.google.com/?q=Makrigialos+beach+Crete",
-        mapsLabel: "Spiaggia Makrigialos"
-      },
-      {
-        id: "d07a02",
-        name: "Gita a Koufonisi (isola)",
-        tag: "gita",
-        desc: "Isola incontaminata, fondali caraibici. Barche da Ierapetra.",
-        detail: "Koufonissi (o Gaidouronisi) è un'isola disabitata al largo di Ierapetra, considerata una delle più belle della Grecia. Ha spiagge di sabbia bianchissima con acque turchesi caraibiche. Le barche partono da Ierapetra (~35 min da Lagada). Gita organizzata con tour operator circa 25-30€ a persona adulti, bambini solitamente metà prezzo. Include pranzo a bordo o sosta in spiaggia.",
-        tips: ["Prenotare il giorno prima — le barche si riempiono in luglio", "Portare crema solare abbondante e cappello (zero ombra sull'isola)", "Vietato raccogliere sabbia o conchiglie — area protetta"],
-        mapsUrl: "https://maps.google.com/?q=Chryssi+Island+Ierapetra+Crete",
-        mapsLabel: "Koufonisi / Isola di Chryssi"
-      },
-      {
-        id: "d07a03",
-        name: "Cena fuori a Makrigialos",
-        tag: "cena",
-        desc: "Una delle migliori serate in zona.",
-        detail: "Makrigialos ha diverse taverne di livello. Dopo la giornata in mare è il posto giusto per una bella cena con vista porto.",
-        tips: [],
-        mapsUrl: "https://maps.google.com/?q=Makrigialos+taverna+restaurant+Crete",
-        mapsLabel: "Taverne Makrigialos"
-      }
-    ]
-  },
-  {
-    id: "day08",
-    date: "2026-07-14",
-    label: "Lun",
     title: "Gola di Pervolakia + Monastero di Kapsa",
     emoji: "🥾",
     type: "vicino",
-    distanza: "~10 min",
+    distanza: "~10 min · 10 km",
     activities: [
       {
-        id: "d08a01",
+        id: "d06a01",
         name: "Gola di Pervolakia",
         tag: "trekking",
         desc: "4 km A/R, adatta a bambini, finisce al monastero sul mare.",
-        detail: "La Gola di Pervolakia (nota anche come Gola di Kapsa) è a pochissimi minuti dalla base. Il sentiero è breve, circa 2 km in discesa fino al Monastero di Kapsa direttamente sul mare. Adatta a bambini da 5 anni in su. Paesaggio di rocce calcaree, vegetazione mediterranea e uccelli. Durata: 1-1.5h in discesa.",
+        detail: "La Gola di Pervolakia (nota anche come Gola di Kapsa) è a pochissimi minuti dalla base — una delle escursioni più facili e scenografiche raggiungibili da Lagada. Il sentiero è breve, circa 2 km in discesa fino al Monastero di Kapsa direttamente sul mare. Adatta a bambini da 5 anni in su. Paesaggio di rocce calcaree, vegetazione mediterranea e uccelli. Durata: 1-1.5h in discesa.",
         tips: ["Partire la mattina prima del caldo", "Scarpe chiuse — non infradito", "Il rientro è in risalita: più impegnativo. Portare acqua abbondante"],
         mapsUrl: "https://maps.google.com/?q=Kapsa+Gorge+Crete",
         mapsLabel: "Gola di Pervolakia / Kapsa"
       },
       {
-        id: "d08a02",
+        id: "d06a02",
         name: "Monastero di Kapsa",
         tag: "cultura",
         desc: "Monastero sul mare, fine del percorso nella gola.",
@@ -364,7 +305,7 @@ export const days = [
         mapsLabel: "Monastero di Kapsa"
       },
       {
-        id: "d08a03",
+        id: "d06a03",
         name: "Bagno a Kalo Nero",
         tag: "mare",
         desc: "Spiaggia sulla strada di rientro dal monastero.",
@@ -374,28 +315,169 @@ export const days = [
         mapsLabel: "Spiaggia Kalo Nero"
       },
       {
-        id: "d08a04",
+        id: "d06a04",
         name: "Cena a casa",
         tag: "cena",
-        desc: "Rientro e cena leggera in appartamento.",
-        detail: "Dopo trekking e bagno, serata tranquilla a casa.",
-        tips: [],
+        desc: "Rientro e cena leggera — domani si parte presto per Elafonissi!",
+        detail: "Dopo trekking e bagno, serata tranquilla a casa. Prepara qualcosa di semplice e vai a letto presto: domani sveglia alle 6:00 per Elafonissi.",
+        tips: ["Prepara lo zaino per domani stasera: crema solare, acqua, pranzo al sacco", "Controlla la prenotazione Ledra Maleme per domani sera"],
         mapsUrl: null,
         mapsLabel: null
       }
     ]
   },
+
+  // ── GIORNO 7 — 13 lug ────────────────────────────────────────
+  {
+    id: "day07",
+    date: "2026-07-13",
+    label: "Lun",
+    title: "Elafonissi → notte a Maleme",
+    emoji: "🏖",
+    type: "gita",
+    distanza: "~3h30 · 240 km (da Lagada a Elafonissi)",
+    activities: [
+      {
+        id: "d07a01",
+        name: "⚠️ Partenza ore 6:00 da Lagada",
+        tag: "logistica",
+        desc: "Sveglia presto — 3h30 di strada fino a Elafonissi.",
+        detail: "Partenza obbligatoria alle 6:00 da Lagada. Elafonissi è a circa 240 km verso ovest, 3h30 di guida. Percorso consigliato: SS di Ierapetra → Heraklion → autostrada E75 verso Chania → Kissamos → Elafonissi. Arrivare entro le 9:30 al massimo.",
+        tips: ["Fare pieno di benzina la sera prima", "Portare caffè e colazione in auto", "Google Maps: impostare 'Elafonissi Beach Crete' come destinazione"],
+        mapsUrl: "https://maps.google.com/?q=Elafonissi+beach+Crete",
+        mapsLabel: "Elafonissi Beach"
+      },
+      {
+        id: "d07a02",
+        name: "Spiaggia di Elafonissi",
+        tag: "mare",
+        desc: "Sabbia rosata, acque bassissime, area protetta. Paradiso per bambini.",
+        detail: "Elafonissi è una delle spiagge più famose d'Europa: sabbia che tende al rosa per la presenza di frammenti di corallo, acque calme, bassissime e calde — perfette per bambini. È un'area naturale protetta. In luglio si riempie dalle 10:30 in poi con le barche da Kissamos: arrivare prima è fondamentale. Restare fino alle 14:30-15:00 poi partire verso il Ledra Maleme (~45 min).",
+        tips: ["Parcheggio a pagamento ~5€ — arrivare presto o è pieno", "Portare pranzo al sacco: bar in loco costosissimi", "Area protetta: non raccogliere sabbia o conchiglie", "La laguna nord è accessibile guadando con acqua fino alle ginocchia — bellissima", "Partire entro le 15:00 per il Ledra Maleme"],
+        mapsUrl: "https://maps.google.com/?q=Elafonissi+beach+Crete",
+        mapsLabel: "Spiaggia di Elafonissi"
+      },
+      {
+        id: "d07a03",
+        name: "🏨 Check-in Ledra Maleme Hotel",
+        tag: "logistica",
+        desc: "Hotel a Maleme, 45 min da Elafonissi · Check-in dalle 14:00",
+        detail: "Ledra Maleme Hotel, Maleme, Chania, Creta. Hotel 3 stelle, 150 metri dalla spiaggia, piscina con bar, ristorante cretese, parcheggio gratuito. Rating 9/10 su Booking. Check-in dalle 14:00, check-out entro le 12:00. Posizione strategica: 45 min da Elafonissi, 30 min da Balos/Kissamos, 20 min da Chania.",
+        tips: ["Avvisare l'hotel dell'orario di arrivo (fine pomeriggio)", "Parcheggio privato gratuito on site", "Ristorante cretese in loco — ottimo per la cena"],
+        mapsUrl: "https://maps.google.com/?q=Ledra+Maleme+Hotel+Maleme+Crete",
+        mapsLabel: "Ledra Maleme Hotel"
+      },
+      {
+        id: "d07a04",
+        name: "Cena al Ledra Maleme o a Platanias",
+        tag: "cena",
+        desc: "Ristorante cretese dell'hotel o 5 min a Platanias.",
+        detail: "Il ristorante del Ledra Maleme serve cucina cretese tradizionale con ingredienti freschi locali. In alternativa Platanias è a soli 5 minuti di auto: centro turistico con buona scelta di locali e una bella passeggiata serale sul lungomare.",
+        tips: ["Il Black Lantern è a 50 metri dall'hotel — molto consigliato dai recensori", "Domani sveglia presto per Balos: cena leggera e a letto presto"],
+        mapsUrl: "https://maps.google.com/?q=Platanias+Chania+Crete+restaurants",
+        mapsLabel: "Platanias — ristoranti"
+      }
+    ]
+  },
+
+  // ── GIORNO 8 — 14 lug ────────────────────────────────────────
+  {
+    id: "day08",
+    date: "2026-07-14",
+    label: "Mar",
+    title: "Balos → rientro a Lagada",
+    emoji: "🌊",
+    type: "gita",
+    distanza: "~30 min da Maleme · rientro ~3h30 a Lagada",
+    activities: [
+      {
+        id: "d08a01",
+        name: "Laguna di Balos",
+        tag: "mare",
+        desc: "La spiaggia più iconica di Creta. Laguna turchese e sabbia rosa.",
+        detail: "Balos è forse la spiaggia più fotografata di Creta: laguna turchese con sabbia bianca e rosa, circondata da colline desertiche nella penisola di Gramvousa. Dal Ledra Maleme è solo ~30 minuti: un lusso enorme rispetto alla distanza da Lagada. Si raggiunge in due modi: 1) In auto: strada sterrata da Kaliviani, 7 km sconnessa ma percorribile con auto normale (attenzione all'assicurazione). 2) In barca da Kissamos (~30 min): circa 25-30€ adulti, metà bambini — include sosta a Gramvousa. Attenzione: con la barca gli orari sono fissi e la spiaggia si riempie.",
+        tips: ["⚠️ Partenza dal Ledra Maleme alle 7:30 per arrivare prima della folla", "In auto: la sterrata è percorribile ma controlla che l'assicurazione copra strade non asfaltate", "In barca da Kissamos: prenotare il giorno prima", "Portare tutto: zero servizi in loco, bar solo a prezzi altissimi", "Parcheggio a pagamento ~3€. Si riempie presto", "Abbandonare la spiaggia entro le 14:00 — poi arrivano le barche e si affollla"],
+        mapsUrl: "https://maps.google.com/?q=Balos+Lagoon+Gramvousa+Crete",
+        mapsLabel: "Laguna di Balos"
+      },
+      {
+        id: "d08a02",
+        name: "Isola di Gramvousa (opzionale)",
+        tag: "cultura",
+        desc: "Fortezza veneziana sull'isola, visibile in barca da Kissamos.",
+        detail: "Se prendete la barca da Kissamos, quasi tutti i tour includono una sosta a Gramvousa: isoletta con una fortezza veneziana del 1579 arroccata sulla roccia. Vista panoramica su Balos dall'alto — spettacolare e diversa dalla spiaggia.",
+        tips: ["I tour combinati Gramvousa + Balos costano circa 25-30€ adulti, metà bambini", "Prenotare online il giorno prima in luglio"],
+        mapsUrl: "https://maps.google.com/?q=Gramvousa+island+fortress+Crete",
+        mapsLabel: "Isola di Gramvousa"
+      },
+      {
+        id: "d08a03",
+        name: "🚗 Rientro a Lagada (~3h30)",
+        tag: "logistica",
+        desc: "Partenza da Balos/Maleme nel primo pomeriggio. Rientro in serata.",
+        detail: "Partire da Balos entro le 14:00 e dal Ledra Maleme (check-out entro le 12:00) verso Lagada. Percorso inverso: ~3h30 di guida. Sosta consigliata a metà strada a Heraklion o Agios Nikolaos per stirarsi le gambe e fare rifornimento.",
+        tips: ["Check-out Ledra Maleme entro le 12:00", "Fare pieno prima di lasciare la zona di Chania — carburante più economico", "Sosta a metà: Heraklion (a ~1h45 da Maleme) o Agios Nikolaos (a ~2h30)"],
+        mapsUrl: "https://maps.google.com/?q=Lagada+Bay+Resort+Makrigialos+Crete",
+        mapsLabel: "Rientro a Lagada Resort"
+      },
+      {
+        id: "d08a04",
+        name: "Cena a casa",
+        tag: "cena",
+        desc: "Rientro in serata dopo una giornata e mezza intensa.",
+        detail: "Dopo Balos e 3h30 di guida, si rientra stanchi. Cena semplice a casa con quello che c'è in frigo — o una pizza d'emergenza a Makrigialos se non hai voglia di cucinare.",
+        tips: ["Porta qualcosa di pronto dal supermercato prima di arrivare a Lagada"],
+        mapsUrl: null,
+        mapsLabel: null
+      }
+    ]
+  },
+
+  // ── GIORNO 9 — 15 lug ────────────────────────────────────────
   {
     id: "day09",
     date: "2026-07-15",
-    label: "Mar",
-    title: "Agios Nikolaos + Spinalonga",
-    emoji: "🏝",
-    type: "gita",
-    distanza: "~1h15",
+    label: "Mer",
+    title: "Giornata relax",
+    emoji: "🌊",
+    type: "vicino",
+    distanza: null,
     activities: [
       {
         id: "d09a01",
+        name: "Spiaggia di Votsalaki",
+        tag: "mare",
+        desc: "Spiaggia isolata e silenziosa, 500 m a ovest di Goudouras.",
+        detail: "Votsalaki è una piccola spiaggia di sassi bianchi a pochi minuti dall'appartamento, meno frequentata della spiaggia principale. Acqua cristallina, ombra naturale con qualche arbusto. Ideale per una giornata di vero riposo dopo i giorni intensi di Elafonissi e Balos.",
+        tips: ["Porta tutto: nessun servizio in loco", "Snorkeling eccellente lungo la scogliera a sinistra"],
+        mapsUrl: "https://maps.google.com/?q=Votsalaki+beach+Goudouras+Crete",
+        mapsLabel: "Spiaggia Votsalaki"
+      },
+      {
+        id: "d09a02",
+        name: "Cena fuori a Ierapetra",
+        tag: "cena",
+        desc: "La città più meridionale d'Europa · ~30 min · 26 km.",
+        detail: "Ierapetra ha ottimi ristoranti di pesce sul lungomare e nel centro storico. Prezzi meno gonfiati rispetto alle zone più turistiche. Il centro storico veneziano merita una passeggiata prima di cena: fortezza veneziana, quartiere turco, vicoli caratteristici.",
+        tips: ["Parcheggio gratuito sul lungomare", "Il vino sfuso locale (hima) è ottimo e costa pochissimo", "Evita i locali con foto plastificate sul menu"],
+        mapsUrl: "https://maps.google.com/?q=Ierapetra+taverna+restaurant+Crete",
+        mapsLabel: "Taverne Ierapetra"
+      }
+    ]
+  },
+
+  // ── GIORNO 10 — 16 lug ───────────────────────────────────────
+  {
+    id: "day10",
+    date: "2026-07-16",
+    label: "Gio",
+    title: "Agios Nikolaos + Spinalonga",
+    emoji: "🏝",
+    type: "gita",
+    distanza: "~1h10 · 61 km",
+    activities: [
+      {
+        id: "d10a01",
         name: "Agios Nikolaos — città e lago",
         tag: "cultura",
         desc: "Una delle città più belle dell'est Creta, lago interno collegato al mare.",
@@ -405,74 +487,45 @@ export const days = [
         mapsLabel: "Lago Voulismeni, Agios Nikolaos"
       },
       {
-        id: "d09a02",
+        id: "d10a02",
         name: "Gita in barca a Spinalonga",
         tag: "cultura",
         desc: "Ex colonia per lebbrosi, isola scenografica nel golfo di Mirabello.",
-        detail: "Spinalonga è una delle destinazioni più affascinanti di Creta. L'isola fu l'ultima colonia per lebbrosi d'Europa, attiva fino al 1957. Le barche partono da Agios Nikolaos o dal porto di Plaka (più vicino). Visita all'isola: 1-1.5h. Biglietto ingresso circa 8€. Le barche costano circa 15-20€ A/R. Resa famosa dal romanzo La villa dell'isola di Victoria Hislop.",
+        detail: "Spinalonga è una delle destinazioni più affascinanti di Creta. L'isola fu l'ultima colonia per lebbrosi d'Europa, attiva fino al 1957. Le barche partono da Agios Nikolaos o dal porto di Plaka (più vicino a ~40 min da Lagada). Visita all'isola: 1-1.5h. Biglietto ingresso circa 8€. Le barche costano circa 15-20€ A/R.",
         tips: ["Prenotare i biglietti online in alta stagione", "Da Plaka il tragitto in barca è più breve (10 min) e più economico", "Portare acqua — sull'isola fa molto caldo"],
         mapsUrl: "https://maps.google.com/?q=Spinalonga+island+Crete",
         mapsLabel: "Isola di Spinalonga"
       },
       {
-        id: "d09a03",
+        id: "d10a03",
         name: "Cena ad Agios Nikolaos",
         tag: "cena",
         desc: "Taverne sul lago Voulismeni — una delle cene migliori del viaggio.",
         detail: "Le taverne attorno al lago di Agios Nikolaos sono ottime e l'atmosfera serale è bellissima. Scegli un posto con vista acqua.",
         tips: ["Le taverne sul lato est del lago sono mediamente migliori e meno caotiche", "Pesce fresco o dakos (bruschetta cretese) per iniziare"],
         mapsUrl: "https://maps.google.com/?q=Agios+Nikolaos+lake+restaurants+Crete",
-        mapsLabel: "Ristoranti lago AN"
+        mapsLabel: "Ristoranti lago Agios Nikolaos"
       }
     ]
   },
-  {
-    id: "day10",
-    date: "2026-07-16",
-    label: "Mer",
-    title: "Giornata relax",
-    emoji: "🌊",
-    type: "vicino",
-    distanza: null,
-    activities: [
-      {
-        id: "d10a01",
-        name: "Spiaggia di Votsalaki",
-        tag: "mare",
-        desc: "Spiaggia più isolata e silenziosa, 500 m a ovest di Goudouras.",
-        detail: "Votsalaki è una piccola spiaggia di sassi bianchi a pochi minuti dall'appartamento, meno frequentata della spiaggia principale. Acqua cristallina, ombra naturale con qualche arbusto. Ideale per una giornata di vero riposo.",
-        tips: ["Porta tutto: nessun servizio in loco", "Snorkeling eccellente lungo la scogliera a sinistra"],
-        mapsUrl: "https://maps.google.com/?q=Votsalaki+beach+Goudouras+Crete",
-        mapsLabel: "Spiaggia Votsalaki"
-      },
-      {
-        id: "d10a02",
-        name: "Cena a casa",
-        tag: "cena",
-        desc: "Serata libera, nessun programma.",
-        detail: "Riposo totale. Cucina quello che hai in frigo o fai una passeggiata alla Taverna Diaskari sotto casa.",
-        tips: [],
-        mapsUrl: null,
-        mapsLabel: null
-      }
-    ]
-  },
+
+  // ── GIORNO 11 — 17 lug ───────────────────────────────────────
   {
     id: "day11",
     date: "2026-07-17",
-    label: "Gio",
+    label: "Ven",
     title: "Heraklion + Palazzo di Cnosso",
     emoji: "🏺",
     type: "gita",
-    distanza: "~1h45",
+    distanza: "~2h · 115 km",
     activities: [
       {
         id: "d11a01",
         name: "Palazzo di Cnosso",
         tag: "cultura",
         desc: "Sito minoico più importante dell'isola. Biglietti online!",
-        detail: "Il Palazzo di Cnosso è il più grande sito minoico del Mediterraneo, risalente al 2000 a.C. Il sito è associato alla leggenda del Minotauro e del Labirinto — perfetto per catturare l'immaginazione dei bambini. Visita: 2-3 ore. Biglietto: 15€ adulti, gratuito sotto i 18 anni. Estate: aprire alle 8:00, consigliato arrivarci all'apertura.",
-        tips: ["Comprare biglietti online — evita la coda in luglio", "Prendere la audioguida o una guida locale: senza contesto il sito è difficile da leggere", "Cappello e acqua — pochissima ombra", "Evita le ore 11-14: caldo e folla massimi"],
+        detail: "Il Palazzo di Cnosso è il più grande sito minoico del Mediterraneo, risalente al 2000 a.C. Il sito è associato alla leggenda del Minotauro e del Labirinto — perfetto per catturare l'immaginazione dei bambini. Visita: 2-3 ore. Biglietto: 15€ adulti, gratuito sotto i 18 anni. Apre alle 8:00 — consigliato arrivarci all'apertura.",
+        tips: ["Comprare biglietti online — evita la coda in luglio", "Prendere l'audioguida o una guida locale: senza contesto il sito è difficile da leggere", "Cappello e acqua — pochissima ombra", "Evita le ore 11-14: caldo e folla massimi"],
         mapsUrl: "https://maps.google.com/?q=Palace+of+Knossos+Heraklion+Crete",
         mapsLabel: "Palazzo di Cnosso"
       },
@@ -481,7 +534,7 @@ export const days = [
         name: "Centro di Heraklion",
         tag: "cultura",
         desc: "Passeggiata nel centro veneziano, Museo Archeologico.",
-        detail: "Heraklion ha un centro storico veneziano notevole: la Fontana Morosini, il porto con la fortezza Koules, Piazza Eleftherias. Il Museo Archeologico di Heraklion è uno dei migliori della Grecia (collezione minoica unica al mondo) — ma è impegnativo: se la bambina è stanca, salta e torna un'altra volta.",
+        detail: "Heraklion ha un centro storico veneziano notevole: la Fontana Morosini, il porto con la fortezza Koules, Piazza Eleftherias. Il Museo Archeologico di Heraklion è uno dei migliori della Grecia (collezione minoica unica al mondo) — ma è impegnativo: se la bambina è stanca, salta.",
         tips: ["Museo Arch.: chiuso il lunedì, orari 8-20 estate", "Il mercato coperto (Agora) è interessante per lo shopping di formaggi e spezie"],
         mapsUrl: "https://maps.google.com/?q=Heraklion+old+city+center+Crete",
         mapsLabel: "Centro storico Heraklion"
@@ -491,21 +544,23 @@ export const days = [
         name: "Cena a casa",
         tag: "cena",
         desc: "Rientro in serata, cena a casa.",
-        detail: "1h45 di strada — meglio rientrare prima di sera e cenare a casa. Porta qualcosa di buono da Heraklion.",
-        tips: [],
+        detail: "2h di strada al rientro — meglio rientrare prima di sera e cenare a casa. Porta qualcosa di buono da Heraklion (formaggi, dolci, vino).",
+        tips: ["Fai spesa al mercato coperto di Heraklion prima di partire"],
         mapsUrl: null,
         mapsLabel: null
       }
     ]
   },
+
+  // ── GIORNO 12 — 18 lug ───────────────────────────────────────
   {
     id: "day12",
     date: "2026-07-18",
-    label: "Ven",
+    label: "Sab",
     title: "Ierapetra + isola di Chrissi",
     emoji: "🏙",
     type: "vicino",
-    distanza: "~35 min",
+    distanza: "~30 min · 26 km",
     activities: [
       {
         id: "d12a01",
@@ -522,72 +577,76 @@ export const days = [
         name: "Gita isola di Chrissi (opzionale)",
         tag: "gita",
         desc: "Isola splendida — verificare accesso sbarco in alta stagione.",
-        detail: "Chrissi (Chrysi) è un'isola protetta a 15 km da Ierapetra con spiagge di sabbia dorata e un cedro secolare. Le barche partono dal porto di Ierapetra. Ticket circa 20-25€ A/R adulti, bambini metà. Attenzione: in alta stagione ci sono restrizioni al numero di visitatori giornalieri — verificare il giorno prima che lo sbarco sia garantito.",
+        detail: "Chrissi (Chrysi) è un'isola protetta a 15 km da Ierapetra con spiagge di sabbia dorata e un cedro secolare. Le barche partono dal porto di Ierapetra. Ticket circa 20-25€ A/R adulti, bambini metà. Attenzione: in alta stagione ci sono restrizioni al numero di visitatori giornalieri — verificare il giorno prima.",
         tips: ["Partire dal porto di Ierapetra mattina presto", "Portare tutto: sull'isola c'è solo un piccolo chiosco", "Zero ombra: protezione solare alta"],
         mapsUrl: "https://maps.google.com/?q=Chrysi+Island+Ierapetra+Crete",
         mapsLabel: "Isola di Chrissi"
       },
       {
         id: "d12a03",
-        name: "Cena fuori a Ierapetra",
-        tag: "cena",
-        desc: "Buona scelta di taverne, prezzi locali.",
-        detail: "Ierapetra ha ottimi ristoranti di pesce sul lungomare e nel centro storico. Prezzi meno gonfiati rispetto alle zone più turistiche.",
-        tips: [],
-        mapsUrl: "https://maps.google.com/?q=Ierapetra+taverna+restaurant+Crete",
-        mapsLabel: "Taverne Ierapetra"
-      }
-    ]
-  },
-  {
-    id: "day13",
-    date: "2026-07-19",
-    label: "Sab",
-    title: "Preveli — laguna e palme",
-    emoji: "🌿",
-    type: "gita",
-    distanza: "~2h",
-    activities: [
-      {
-        id: "d13a01",
-        name: "Spiaggia di Preveli",
-        tag: "mare",
-        desc: "Laguna con palme, fiume che sfocia nel mare. Unica al mondo.",
-        detail: "Preveli è una delle spiagge più iconiche di Creta. Il fiume Megalopotamos crea una laguna tropicale prima di sfociare nel Mar Libico, circondata da palme nane cretesi. Si raggiunge scendendo a piedi dal parcheggio in alto (circa 15-20 minuti su sentiero abbastanza ripido) oppure in barca dalla baia di Plakias. L'acqua è eccezionale — mare e fiume mescolati.",
-        tips: ["Partire di mattina presto — parcheggio si riempie presto", "Il sentiero in discesa è su terreno irregolare: scarpe chiuse, non infradito", "La risalita è faticosa: portare acqua abbondante", "In barca da Plakias è più comodo ma costa circa 15€ A/R"],
-        mapsUrl: "https://maps.google.com/?q=Preveli+beach+Crete",
-        mapsLabel: "Spiaggia di Preveli"
-      },
-      {
-        id: "d13a02",
-        name: "Monastero di Preveli (facoltativo)",
-        tag: "cultura",
-        desc: "Monastero panoramico sulla strada per la spiaggia.",
-        detail: "Il Monastero di Preveli si trova sulla strada che porta alla spiaggia. Vale una sosta di 20-30 minuti: vista panoramica sul Mar Libico, giardino curato, museo. Biglietto circa 2,50€.",
-        tips: ["Abbigliamento coperto", "Vendono raki e prodotti del monastero all'uscita"],
-        mapsUrl: "https://maps.google.com/?q=Preveli+Monastery+Crete",
-        mapsLabel: "Monastero di Preveli"
-      },
-      {
-        id: "d13a03",
         name: "Cena a casa",
         tag: "cena",
-        desc: "Rientro dopo una lunga gita — cena semplice a casa.",
-        detail: "2h di rientro: meglio tornare e cucinare qualcosa di semplice a casa.",
+        desc: "Serata tranquilla in appartamento.",
+        detail: "Rientro da Ierapetra e cena a casa con prodotti freschi del mercato.",
         tips: [],
         mapsUrl: null,
         mapsLabel: null
       }
     ]
   },
+
+  // ── GIORNO 13 — 19 lug ───────────────────────────────────────
+  {
+    id: "day13",
+    date: "2026-07-19",
+    label: "Dom",
+    title: "Makrigialos + Koufonisi",
+    emoji: "⛵",
+    type: "vicino",
+    distanza: "~5 min · 2,5 km (+ barca da Ierapetra ~30 min)",
+    activities: [
+      {
+        id: "d13a01",
+        name: "Spiaggia di Makrigialos",
+        tag: "mare",
+        desc: "Bella spiaggia sabbiosa attrezzata, 2,5 km dalla base.",
+        detail: "Makrigialos ha una delle spiagge più belle dell'est Creta: lunga, sabbiosa, con acque basse e chiare. Attrezzata con lettini e ombrelloni in affitto (circa 8-10€ a coppia). Comoda e sicura per bambini.",
+        tips: ["Ottima base per mattina prima di eventuale gita a Koufonisi", "I lettini si prenotano arrivando presto"],
+        mapsUrl: "https://maps.google.com/?q=Makrigialos+beach+Crete",
+        mapsLabel: "Spiaggia Makrigialos"
+      },
+      {
+        id: "d13a02",
+        name: "Gita a Koufonisi (isola)",
+        tag: "gita",
+        desc: "Isola incontaminata, fondali caraibici. Barche da Ierapetra.",
+        detail: "Koufonissi (o Gaidouronisi) è un'isola disabitata al largo di Ierapetra, considerata una delle più belle della Grecia. Ha spiagge di sabbia bianchissima con acque turchesi caraibiche. Le barche partono da Ierapetra (~30 min da Lagada). Gita organizzata con tour operator circa 25-30€ a persona adulti, bambini solitamente metà prezzo.",
+        tips: ["Prenotare il giorno prima — le barche si riempiono in luglio", "Portare crema solare abbondante e cappello (zero ombra sull'isola)", "Vietato raccogliere sabbia o conchiglie — area protetta"],
+        mapsUrl: "https://maps.google.com/?q=Chryssi+Island+Ierapetra+Crete",
+        mapsLabel: "Koufonisi / Isola di Chryssi"
+      },
+      {
+        id: "d13a03",
+        name: "Cena fuori a Makrigialos",
+        tag: "cena",
+        desc: "Una delle migliori serate in zona.",
+        detail: "Makrigialos ha diverse taverne di livello. Dopo la giornata in mare è il posto giusto per una bella cena con vista porto.",
+        tips: [],
+        mapsUrl: "https://maps.google.com/?q=Makrigialos+taverna+restaurant+Crete",
+        mapsLabel: "Taverne Makrigialos"
+      }
+    ]
+  },
+
+  // ── GIORNO 14 — 20 lug ───────────────────────────────────────
   {
     id: "day14",
     date: "2026-07-20",
-    label: "Dom",
+    label: "Lun",
     title: "Gola di Richtis + Cascata",
-    emoji: "🌊",
+    emoji: "🌿",
     type: "gita",
-    distanza: "~1h da Lagada",
+    distanza: "~1h · 55 km",
     activities: [
       {
         id: "d14a01",
@@ -595,13 +654,7 @@ export const days = [
         tag: "trekking",
         desc: "4 km A/R tra ulivi e oleandri, finisce in una cascata sul mare.",
         detail: "La Gola di Richtis è uno dei percorsi naturalistici più belli dell'est Creta, molto meno frequentato delle Samaria. Il sentiero scende per circa 2 km attraverso una vegetazione lussureggiante — ulivi selvatici, oleandri, platani — lungo il fiume Richtis fino alla cascata che sfocia direttamente sul mare. Dislivello contenuto, sentiero ben segnalato. Adatta a bambini da 5 anni in su. Durata: 1-1.5h in discesa, stessa in risalita.",
-        tips: [
-          "Partire la mattina presto per evitare il caldo nel canyon",
-          "Scarpe chiuse con buona suola — il terreno è scivoloso vicino all'acqua",
-          "Portare almeno 1,5 litri d'acqua a persona",
-          "Il sentiero inizia vicino al villaggio di Exo Mouliana — segui le indicazioni per Richtis Gorge",
-          "La cascata è alta circa 15 metri — spettacolare anche in luglio"
-        ],
+        tips: ["Partire la mattina presto per evitare il caldo nel canyon", "Scarpe chiuse con buona suola — il terreno è scivoloso vicino all'acqua", "Portare almeno 1,5 litri d'acqua a persona", "Il sentiero inizia vicino al villaggio di Exo Mouliana — segui le indicazioni per Richtis Gorge", "La cascata è alta circa 15 metri — spettacolare anche in luglio"],
         mapsUrl: "https://maps.google.com/?q=Richtis+Gorge+Crete",
         mapsLabel: "Gola di Richtis"
       },
@@ -611,10 +664,7 @@ export const days = [
         tag: "mare",
         desc: "La cascata sfocia sul mare — bagno alla fine del percorso.",
         detail: "La cascata di Richtis è la più alta di Creta orientale. Dopo la discesa nella gola si apre su una piccola spiaggia di sassi dove la cascata sfocia nel mare. L'acqua è fresca e limpidissima — uno dei bagni più belli del viaggio. La spiaggia è raggiungibile solo a piedi, quindi sempre poco affollata.",
-        tips: [
-          "Porta sandali da scoglio per camminare vicino alla cascata",
-          "L'acqua è fresca anche in luglio — perfetta dopo il cammino"
-        ],
+        tips: ["Porta sandali da scoglio per camminare vicino alla cascata", "L'acqua è fresca anche in luglio — perfetta dopo il cammino"],
         mapsUrl: "https://maps.google.com/?q=Richtis+waterfall+beach+Crete",
         mapsLabel: "Cascata e spiaggia Richtis"
       },
@@ -624,10 +674,7 @@ export const days = [
         tag: "cena",
         desc: "Piccoli villaggi tradizionali sulla strada del rientro.",
         detail: "Exo Mouliana e il vicino Sfaka sono villaggi dell'entroterra cretese praticamente intatti, con qualche taverna tradizionale dove si mangia cucina casalinga autentica — agnello, fagioli, dakos. Prezzi bassissimi, zero turismo.",
-        tips: [
-          "Non aspettarti menu in inglese — indicare con il dito va benissimo",
-          "Sfaka è famosa per il formaggio mizithra fatto in casa"
-        ],
+        tips: ["Non aspettarti menu in inglese — indicare con il dito va benissimo", "Sfaka è famosa per il formaggio mizithra fatto in casa"],
         mapsUrl: "https://maps.google.com/?q=Exo+Mouliana+village+Crete",
         mapsLabel: "Exo Mouliana"
       },
@@ -636,7 +683,7 @@ export const days = [
         name: "Spiaggia di Agia Fotia (rientro)",
         tag: "mare",
         desc: "Spiaggia comoda sulla strada di casa, per chiudere la giornata.",
-        detail: "Agia Fotia è una spiaggia sabbiosa a circa 20 minuti da Lagada, sulla strada del rientro. Attrezzata, acque calme. Perfetta per un pomeriggio rilassato dopo il trekking mattutino prima di rientrare alla base.",
+        detail: "Agia Fotia è una spiaggia sabbiosa a circa 20 minuti da Lagada, sulla strada del rientro. Attrezzata, acque calme. Perfetta per un pomeriggio rilassato dopo il trekking mattutino.",
         tips: [],
         mapsUrl: "https://maps.google.com/?q=Agia+Fotia+beach+Crete+Sitia",
         mapsLabel: "Spiaggia Agia Fotia"
@@ -646,45 +693,48 @@ export const days = [
         name: "Cena a casa",
         tag: "cena",
         desc: "Rientro tranquillo, cena in appartamento.",
-        detail: "Giornata completa ma non estenuante. Rientro in tarda estate, cena leggera a casa.",
+        detail: "Giornata completa ma non estenuante. Rientro in tarda giornata, cena leggera a casa.",
         tips: [],
         mapsUrl: null,
         mapsLabel: null
       }
     ]
   },
+
+  // ── GIORNO 15 — 21 lug ───────────────────────────────────────
   {
     id: "day15",
     date: "2026-07-21",
-    label: "Lun",
-
-    title: "Elafonissi — ultima gita",
-    emoji: "🏖",
-    type: "gita",
-    distanza: "~2h45",
+    label: "Mar",
+    title: "Giornata libera — Lagada",
+    emoji: "☀️",
+    type: "vicino",
+    distanza: null,
     activities: [
       {
         id: "d15a01",
-        name: "Spiaggia di Elafonissi",
+        name: "Spiaggia Lagada / Diaskari",
         tag: "mare",
-        desc: "Sabbia rosata, acque bassissime, area protetta. Partenza ore 7:30!",
-        detail: "Elafonissi è una delle spiagge più famose d'Europa: sabbia che tende al rosa per la presenza di frammenti di corallo, acque calme, bassissime e calde — perfette per bambini. È un'area naturale protetta. Distanza: circa 2h45 dalla base. In luglio si riempie moltissimo: partire tassativamente alle 7:30 per arrivare entro le 10:30 e godersi la mattina tranquillamente. Restare fino alle 14-15, poi rientro.",
-        tips: ["⚠️ Partenza ore 7:30 al massimo", "Parcheggio a pagamento (~3€) — si esaurisce in fretta", "Portare pranzo al sacco o comprare in loco (prezzi alti)", "Area protetta: non raccogliere sabbia", "La laguna a nord della spiaggia è accessibile guadando (acqua fino alle ginocchia) — bellissima"],
-        mapsUrl: "https://maps.google.com/?q=Elafonissi+beach+Crete",
-        mapsLabel: "Spiaggia di Elafonissi"
+        desc: "Spiaggia a 5 minuti dall'appartamento. Nessun programma.",
+        detail: "La spiaggia di Lagada Bay è praticamente sotto l'appartamento. Piccola, ciottolosa ma con acqua cristallina e pochissima gente. Ideale per un giorno di recupero e relax totale prima del rientro.",
+        tips: ["Taverna Diaskari Green Beach a pochi passi — pesce fresco, prezzi locali", "Porta snorkeling: i fondali rocciosi sono ricchi di pesci"],
+        mapsUrl: "https://maps.google.com/?q=Lagada+beach+Makrigialos+Crete",
+        mapsLabel: "Spiaggia Lagada"
       },
       {
         id: "d15a02",
         name: "Cena fuori — ultima serata",
         tag: "cena",
         desc: "L'ultima vera cena del viaggio: scegli il posto migliore.",
-        detail: "Ultima serata prima del rientro. Scegli il locale migliore che hai scoperto in queste due settimane, oppure torna nella taverna preferita di Makrigialos per una degna conclusione.",
-        tips: ["Porta a casa del raki come souvenir", "Fai foto al tramonto — l'est di Creta ha tramonti bellissimi"],
+        detail: "Ultima serata a Creta. Torna nella taverna preferita di Makrigialos o scopri qualcosa di nuovo. Porta a casa raki e prodotti locali come souvenir.",
+        tips: ["Porta a casa del raki come souvenir", "Fai foto al tramonto sul Mar Libico — memorabile", "Domani sveglia presto: check-out entro le 11:00"],
         mapsUrl: "https://maps.google.com/?q=Makrigialos+best+restaurant+Crete",
-        mapsLabel: "Makrigialos"
+        mapsLabel: "Taverne Makrigialos"
       }
     ]
   },
+
+  // ── GIORNO 16 — 22 lug ───────────────────────────────────────
   {
     id: "day16",
     date: "2026-07-22",
@@ -710,7 +760,7 @@ export const days = [
         tag: "logistica",
         desc: "Riconsegna Peugeot 208 in aeroporto ore 20:30",
         detail: "Riconsegna auto all'Autocandia, Kazantzakis Airport Heraklion, ore 20:30. Stessa area di ritiro. Controllare il livello del carburante prima di restituire. Tel: +302814260270.",
-        tips: ["Fare pieno prima di arrivare in aeroporto", "Arrivare qualche minuto prima delle 20:30", "Scattare foto all'auto prima della riconsegna per eventuali contestazioni"],
+        tips: ["Fare pieno prima di arrivare in aeroporto", "Arrivare qualche minuto prima delle 20:30", "Scattare foto all'auto prima della riconsegna per eventuali contestazioni", "⚠️ Da Lagada a Heraklion: ~2h di strada — partire entro le 17:30"],
         mapsUrl: "https://maps.google.com/?q=Heraklion+Airport+Crete",
         mapsLabel: "Aeroporto Heraklion — Autocandia"
       },
@@ -728,13 +778,13 @@ export const days = [
   }
 ];
 
-// Giorno kitesurf (da inserire nel piano o consultare separatamente)
+// ── INFO KITESURF ─────────────────────────────────────────────
 export const kitesurfInfo = {
   spot: "Kouremenos Beach, Palekastro",
-  distanza: "~45 min da Lagada",
+  distanza: "~1h20 · 70 km da Lagada",
   scuola: "Freak Surf Crete",
   tel: "+30 697 925 3861",
   sito: "https://www.freak-surf.com/crete/",
   mapsUrl: "https://maps.google.com/?q=Kouremenos+Beach+Palekastro+Crete+kitesurf",
-  note: "Vento Meltemi quasi garantito ogni giorno in luglio. Noleggio attrezzatura completa (kite + tavola + harness): circa 60-80€ mezza giornata, 100-130€ giornata intera. Richiesta valutazione iniziale (~20€ scalabile). Prenotare per telefono qualche giorno prima."
+  note: "Vento Meltemi quasi garantito ogni giorno in luglio (media 6 Bft). Noleggio attrezzatura completa (kite + tavola + harness): circa 60-80€ mezza giornata, 100-130€ giornata intera. Richiesta valutazione iniziale (~20€ scalabile). Prenotare per telefono qualche giorno prima. Combinabile con la gita a Vai/Toplou (stesso quadrante nord-est)."
 };
