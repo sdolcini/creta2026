@@ -448,56 +448,13 @@ export const days = [
     id: "day09",
     date: "2026-07-15",
     label: "Gio",
-    title: "Agios Nikolaos + Spinalonga",
-    emoji: "🏝",
-    type: "gita",
-    distanza: "~1h10 · 61 km",
-    activities: [
-      {
-        id: "d09a01",
-        name: "Agios Nikolaos — città e lago",
-        tag: "cultura",
-        desc: "Una delle città più belle dell'est Creta, lago interno collegato al mare.",
-        detail: "Agios Nikolaos è una delle città più scenografiche di Creta. Il suo elemento distintivo è il lago Voulismeni, collegato al mare da un canale artificiale — un posto unico al mondo. Passeggiata sul lungomare, boutique, musei. Il Museo Archeologico di Agios Nikolaos è uno dei migliori di Creta.",
-        tips: ["Parcheggio gratuito fuori dal centro, poi a piedi", "Il lago Voulismeni è bellissimo al tramonto — torna per la cena"],
-        mapsUrl: "https://maps.google.com/?q=Agios+Nikolaos+lake+Crete",
-        mapsLabel: "Lago Voulismeni, Agios Nikolaos"
-      },
-      {
-        id: "d09a02",
-        name: "Gita in barca a Spinalonga",
-        tag: "cultura",
-        desc: "Ex colonia per lebbrosi, isola scenografica nel golfo di Mirabello.",
-        detail: "Spinalonga è una delle destinazioni più affascinanti di Creta. L'isola fu l'ultima colonia per lebbrosi d'Europa, attiva fino al 1957. Le barche partono da Agios Nikolaos o dal porto di Plaka (più vicino a ~40 min da Lagada). Visita all'isola: 1-1.5h. Biglietto ingresso circa 8€. Le barche costano circa 15-20€ A/R.",
-        tips: ["Prenotare i biglietti online in alta stagione", "Da Plaka il tragitto in barca è più breve (10 min) e più economico", "Portare acqua — sull'isola fa molto caldo"],
-        mapsUrl: "https://maps.google.com/?q=Spinalonga+island+Crete",
-        mapsLabel: "Isola di Spinalonga"
-      },
-      {
-        id: "d09a03",
-        name: "Cena ad Agios Nikolaos",
-        tag: "cena",
-        desc: "Taverne sul lago Voulismeni — una delle cene migliori del viaggio.",
-        detail: "Le taverne attorno al lago di Agios Nikolaos sono ottime e l'atmosfera serale è bellissima. Scegli un posto con vista acqua.",
-        tips: ["Le taverne sul lato est del lago sono mediamente migliori e meno caotiche", "Pesce fresco o dakos (bruschetta cretese) per iniziare"],
-        mapsUrl: "https://maps.google.com/?q=Agios+Nikolaos+lake+restaurants+Crete",
-        mapsLabel: "Ristoranti lago Agios Nikolaos"
-      }
-    ]
-  },
-
-  // ── GIORNO 10 — 16 lug ───────────────────────────────────────
-  {
-    id: "day10",
-    date: "2026-07-16",
-    label: "Mer",
     title: "Giornata relax",
     emoji: "🌊",
     type: "vicino",
     distanza: null,
     activities: [
       {
-        id: "d10a01",
+        id: "d09a01",
         name: "Spiaggia di Votsalaki",
         tag: "mare",
         desc: "Spiaggia isolata e silenziosa, 500 m a ovest di Goudouras.",
@@ -507,7 +464,7 @@ export const days = [
         mapsLabel: "Spiaggia Votsalaki"
       },
       {
-        id: "d10a02",
+        id: "d09a02",
         name: "Cena fuori a Ierapetra",
         tag: "cena",
         desc: "La città più meridionale d'Europa · ~30 min · 26 km.",
@@ -515,6 +472,49 @@ export const days = [
         tips: ["Parcheggio gratuito sul lungomare", "Il vino sfuso locale (hima) è ottimo e costa pochissimo", "Evita i locali con foto plastificate sul menu"],
         mapsUrl: "https://maps.google.com/?q=Ierapetra+taverna+restaurant+Crete",
         mapsLabel: "Taverne Ierapetra"
+      }
+    ]
+  },
+
+  // ── GIORNO 10 — 16 lug ───────────────────────────────────────
+  {
+    id: "day10",
+    date: "2026-07-16",
+    label: "Mer",
+    title: "Agios Nikolaos + Spinalonga",
+    emoji: "🏝",
+    type: "gita",
+    distanza: "~1h10 · 61 km",
+    activities: [
+      {
+        id: "d10a01",
+        name: "Agios Nikolaos — città e lago",
+        tag: "cultura",
+        desc: "Una delle città più belle dell'est Creta, lago interno collegato al mare.",
+        detail: "Agios Nikolaos è una delle città più scenografiche di Creta. Il suo elemento distintivo è il lago Voulismeni, collegato al mare da un canale artificiale — un posto unico al mondo. Passeggiata sul lungomare, boutique, musei. Il Museo Archeologico di Agios Nikolaos è uno dei migliori di Creta.",
+        tips: ["Parcheggio gratuito fuori dal centro, poi a piedi", "Il lago Voulismeni è bellissimo al tramonto — torna per la cena"],
+        mapsUrl: "https://maps.google.com/?q=Agios+Nikolaos+lake+Crete",
+        mapsLabel: "Lago Voulismeni, Agios Nikolaos"
+      },
+      {
+        id: "d10a02",
+        name: "Gita in barca a Spinalonga",
+        tag: "cultura",
+        desc: "Ex colonia per lebbrosi, isola scenografica nel golfo di Mirabello.",
+        detail: "Spinalonga è una delle destinazioni più affascinanti di Creta. L'isola fu l'ultima colonia per lebbrosi d'Europa, attiva fino al 1957. Le barche partono da Agios Nikolaos o dal porto di Plaka (più vicino a ~40 min da Lagada). Visita all'isola: 1-1.5h. Biglietto ingresso circa 8€. Le barche costano circa 15-20€ A/R.",
+        tips: ["Prenotare i biglietti online in alta stagione", "Da Plaka il tragitto in barca è più breve (10 min) e più economico", "Portare acqua — sull'isola fa molto caldo"],
+        mapsUrl: "https://maps.google.com/?q=Spinalonga+island+Crete",
+        mapsLabel: "Isola di Spinalonga"
+      },
+      {
+        id: "d10a03",
+        name: "Cena ad Agios Nikolaos",
+        tag: "cena",
+        desc: "Taverne sul lago Voulismeni — una delle cene migliori del viaggio.",
+        detail: "Le taverne attorno al lago di Agios Nikolaos sono ottime e l'atmosfera serale è bellissima. Scegli un posto con vista acqua.",
+        tips: ["Le taverne sul lato est del lago sono mediamente migliori e meno caotiche", "Pesce fresco o dakos (bruschetta cretese) per iniziare"],
+        mapsUrl: "https://maps.google.com/?q=Agios+Nikolaos+lake+restaurants+Crete",
+        mapsLabel: "Ristoranti lago Agios Nikolaos"
       }
     ]
   },
