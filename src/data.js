@@ -584,37 +584,69 @@ export const days = [
     id: "day14",
     date: "2026-07-20",
     label: "Dom",
-    title: "Gole di Samaria",
-    emoji: "⛰️",
+    title: "Gola di Richtis + Cascata",
+    emoji: "🌊",
     type: "gita",
-    distanza: "~2h30 fino a Omalos",
+    distanza: "~1h da Lagada",
     activities: [
       {
         id: "d14a01",
-        name: "Gole di Samaria — trekking",
+        name: "Gola di Richtis — trekking",
         tag: "trekking",
-        desc: "16 km, il canyon più lungo d'Europa. Giornata intera.",
-        detail: "Le Gole di Samaria sono il trekking più celebre di Creta: 16 km in discesa attraverso il canyon più lungo d'Europa (18 km totali). Si entra a Omalos (1200m) e si scende fino al Mar Libico ad Agia Roumeli. Durata: 4-6 ore a seconda del passo. Ingresso: 5€ adulti, gratuito sotto i 15 anni. Il parco è aperto da maggio a ottobre, 6:00-15:00 (ultimo ingresso).",
-        tips: ["⚠️ Consigliato dai 8 anni in su", "Partire all'apertura (6:00) per evitare il caldo peggiore", "Scarponi o scarpe da trekking obbligatori — il terreno è sassoso", "Portare almeno 2 litri d'acqua a persona", "Si termina ad Agia Roumeli: prendi il traghetto per Chora Sfakion (circa 10€), poi taxi/bus per il parcheggio", "Organizza i trasporti A/R prima di partire — i bus da Heraklion e Chania passano presto"],
-        mapsUrl: "https://maps.google.com/?q=Samaria+Gorge+entrance+Omalos+Crete",
-        mapsLabel: "Ingresso Gole di Samaria"
+        desc: "4 km A/R tra ulivi e oleandri, finisce in una cascata sul mare.",
+        detail: "La Gola di Richtis è uno dei percorsi naturalistici più belli dell'est Creta, molto meno frequentato delle Samaria. Il sentiero scende per circa 2 km attraverso una vegetazione lussureggiante — ulivi selvatici, oleandri, platani — lungo il fiume Richtis fino alla cascata che sfocia direttamente sul mare. Dislivello contenuto, sentiero ben segnalato. Adatta a bambini da 5 anni in su. Durata: 1-1.5h in discesa, stessa in risalita.",
+        tips: [
+          "Partire la mattina presto per evitare il caldo nel canyon",
+          "Scarpe chiuse con buona suola — il terreno è scivoloso vicino all'acqua",
+          "Portare almeno 1,5 litri d'acqua a persona",
+          "Il sentiero inizia vicino al villaggio di Exo Mouliana — segui le indicazioni per Richtis Gorge",
+          "La cascata è alta circa 15 metri — spettacolare anche in luglio"
+        ],
+        mapsUrl: "https://maps.google.com/?q=Richtis+Gorge+Crete",
+        mapsLabel: "Gola di Richtis"
       },
       {
         id: "d14a02",
-        name: "Agia Roumeli — bagno finale",
+        name: "Cascata di Richtis + bagno",
         tag: "mare",
-        desc: "Il mare alla fine delle gole: meritato!",
-        detail: "Agia Roumeli è accessibile solo a piedi o in barca — nessuna strada carrabile. Piccolo villaggio con taverne e spiaggia. Dopo 16 km di cammino, il tuffo è tra le esperienze più belle del viaggio.",
-        tips: ["Il traghetto per Chora Sfakion parte alle ore fisse — controlla l'orario prima", "Mangia qualcosa ad Agia Roumeli: hai camminato tanto"],
-        mapsUrl: "https://maps.google.com/?q=Agia+Roumeli+Crete",
-        mapsLabel: "Agia Roumeli"
+        desc: "La cascata sfocia sul mare — bagno alla fine del percorso.",
+        detail: "La cascata di Richtis è la più alta di Creta orientale. Dopo la discesa nella gola si apre su una piccola spiaggia di sassi dove la cascata sfocia nel mare. L'acqua è fresca e limpidissima — uno dei bagni più belli del viaggio. La spiaggia è raggiungibile solo a piedi, quindi sempre poco affollata.",
+        tips: [
+          "Porta sandali da scoglio per camminare vicino alla cascata",
+          "L'acqua è fresca anche in luglio — perfetta dopo il cammino"
+        ],
+        mapsUrl: "https://maps.google.com/?q=Richtis+waterfall+beach+Crete",
+        mapsLabel: "Cascata e spiaggia Richtis"
       },
       {
         id: "d14a03",
+        name: "Pranzo a Exo Mouliana o Sfaka",
+        tag: "cena",
+        desc: "Piccoli villaggi tradizionali sulla strada del rientro.",
+        detail: "Exo Mouliana e il vicino Sfaka sono villaggi dell'entroterra cretese praticamente intatti, con qualche taverna tradizionale dove si mangia cucina casalinga autentica — agnello, fagioli, dakos. Prezzi bassissimi, zero turismo.",
+        tips: [
+          "Non aspettarti menu in inglese — indicare con il dito va benissimo",
+          "Sfaka è famosa per il formaggio mizithra fatto in casa"
+        ],
+        mapsUrl: "https://maps.google.com/?q=Exo+Mouliana+village+Crete",
+        mapsLabel: "Exo Mouliana"
+      },
+      {
+        id: "d14a04",
+        name: "Spiaggia di Agia Fotia (rientro)",
+        tag: "mare",
+        desc: "Spiaggia comoda sulla strada di casa, per chiudere la giornata.",
+        detail: "Agia Fotia è una spiaggia sabbiosa a circa 20 minuti da Lagada, sulla strada del rientro. Attrezzata, acque calme. Perfetta per un pomeriggio rilassato dopo il trekking mattutino prima di rientrare alla base.",
+        tips: [],
+        mapsUrl: "https://maps.google.com/?q=Agia+Fotia+beach+Crete+Sitia",
+        mapsLabel: "Spiaggia Agia Fotia"
+      },
+      {
+        id: "d14a05",
         name: "Cena a casa",
         tag: "cena",
-        desc: "Rientro tardi e stanchi — cena a casa.",
-        detail: "Dopo le Gole è praticamente impossibile fare altro. Rientro in serata e cena veloce a casa.",
+        desc: "Rientro tranquillo, cena in appartamento.",
+        detail: "Giornata completa ma non estenuante. Rientro in tarda estate, cena leggera a casa.",
         tips: [],
         mapsUrl: null,
         mapsLabel: null
