@@ -625,6 +625,7 @@ export const days = [
     id: "day15",
     date: "2026-07-21",
     label: "Lun",
+
     title: "Elafonissi — ultima gita",
     emoji: "🏖",
     type: "gita",
@@ -655,7 +656,7 @@ export const days = [
   {
     id: "day16",
     date: "2026-07-22",
-    label: "Mar",
+    label: "Mer",
     title: "Rientro",
     emoji: "✈️",
     type: "vicino",
@@ -676,7 +677,7 @@ export const days = [
         name: "🚗 Riconsegna auto — Autocandia",
         tag: "logistica",
         desc: "Riconsegna Peugeot 208 in aeroporto ore 20:30",
-        detail: "Riconsegna auto all'Autocandia, Kazantzakis Airport Heraklion, ore 20:30. Stessa area di ritiro. Controllare il livello del carburante prima di restituire (serbatoio allo stesso livello del ritiro). Tel: +302814260270.",
+        detail: "Riconsegna auto all'Autocandia, Kazantzakis Airport Heraklion, ore 20:30. Stessa area di ritiro. Controllare il livello del carburante prima di restituire. Tel: +302814260270.",
         tips: ["Fare pieno prima di arrivare in aeroporto", "Arrivare qualche minuto prima delle 20:30", "Scattare foto all'auto prima della riconsegna per eventuali contestazioni"],
         mapsUrl: "https://maps.google.com/?q=Heraklion+Airport+Crete",
         mapsLabel: "Aeroporto Heraklion — Autocandia"
@@ -704,4 +705,6 @@ export const kitesurfInfo = {
   sito: "https://www.freak-surf.com/crete/",
   mapsUrl: "https://maps.google.com/?q=Kouremenos+Beach+Palekastro+Crete+kitesurf",
   note: "Vento Meltemi quasi garantito ogni giorno in luglio. Noleggio attrezzatura completa (kite + tavola + harness): circa 60-80€ mezza giornata, 100-130€ giornata intera. Richiesta valutazione iniziale (~20€ scalabile). Prenotare per telefono qualche giorno prima."
+};
+re per telefono qualche giorno prima."
 };
