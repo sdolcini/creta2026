@@ -441,4 +441,5 @@ async function init() {
     state.openDays[todayDay.id] = true;
     // Imposta la settimana giusta
     const idx = days.indexOf(todayDay);
-    
+  }
+}
