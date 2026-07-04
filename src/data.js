@@ -446,7 +446,7 @@ export const days = [
   // ── GIORNO 9 — 15 lug ────────────────────────────────────────
   {
     id: "day09",
-    date: "2026-07-165,
+    date: "2026-07-15",
     label: "Gio",
     title: "Agios Nikolaos + Spinalonga",
     emoji: "🏝",
