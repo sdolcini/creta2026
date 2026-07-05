@@ -35,6 +35,16 @@ export const days = [
         tips: ["Portare il libretto sanitario di Axel", "Portare il suo cibo se ha una dieta specifica", "Confermare la data di ritiro: 22 luglio 2026"],
         mapsUrl: "https://www.google.com/maps/dir//Via+Giacomo+Leopardi,+94,+20010+Marcallo+con+Casone+MI",
         mapsLabel: "Centro Cinofilo della Viola"
+      },
+      {
+        id: "d00a03",
+        name: "🅿️ Porta l'auto a Mister Parking — entro le 03:00 del 7 lug",
+        tag: "logistica",
+        desc: "Parcheggio prenotato con Parkos · Conf. 6GD95HB · navetta gratuita 6 min",
+        detail: "Mister Parking (Paga in parcheggio), Via Giuseppe Giusti 96, 21019 Somma Lombardo (VA). Prenotazione Parkos n. 6GD95HB. Parcheggio scoperto con bus navetta gratuito (6 min fino al Terminal 1 di Malpensa). Lasciare l'auto entro le 03:00 del 7 luglio per prendere il volo delle 05:30. Il parcheggio è prenotato fino al 23 luglio ore 00:30 — perfetto con l'atterraggio alle 00:10. Si paga direttamente in parcheggio al ritiro.",
+        tips: ["Arrivare al parcheggio entro le 02:45 per avere margine con la navetta", "La navetta porta direttamente al Terminal 1 — quello giusto per Wizz Air Malta", "Tel. Mister Parking: +39 0331 25 65 81 oppure +39 348 8036626 (attivi 24h/7g)", "Al ritiro (23 lug ~00:30): la navetta riporta dal Terminal 1 al parcheggio", "Cancellazione gratuita fino a 24h prima — modifica su account Parkos"],
+        mapsUrl: "https://maps.google.com/?q=Via+Giuseppe+Giusti+96+Somma+Lombardo+Mister+Parking",
+        mapsLabel: "Mister Parking — Somma Lombardo"
       }
     ]
   },
@@ -53,11 +63,11 @@ export const days = [
         id: "d01a00",
         name: "✈️ Volo andata — W46439",
         tag: "logistica",
-        desc: "Wizz Air W46439 · Milano MXP → Heraklion HER · 05:30–09:15",
-        detail: "Volo diretto Wizz Air Malta, durata 2h 45min. Partenza da Milano Malpensa (MXP) ore 05:30, arrivo Heraklion (HER) ore 09:15. Prenotazione: GPY5KQ · Volo numero W46439.",
-        tips: ["Presentarsi in aeroporto almeno 2h prima (ore 03:30)", "Stefano: 1 bagaglio in stiva 20kg incluso", "Leidy e Sophia: solo oggetto personale (sotto al sedile), bagaglio a mano NON incluso", "Check-in online su Wizz Air prima della partenza"],
-        mapsUrl: "https://maps.google.com/?q=Milano+Malpensa+Airport",
-        mapsLabel: "Aeroporto Malpensa MXP"
+        desc: "Wizz Air W46439 · Milano MXP T1 → Heraklion HER · 05:30–09:15",
+        detail: "Volo diretto Wizz Air Malta, durata 2h 45min. Partenza da Milano Malpensa Terminal 1 (MXP) ore 05:30, arrivo Heraklion (HER) ore 09:15. Prenotazione: GPY5KQ · Volo numero W46439. Sequenza mattina: lascia auto a Mister Parking (Via Giusti 96, Somma Lombardo) → navetta gratuita 6 min → Terminal 1 → check-in → imbarco.",
+        tips: ["⚠️ Arrivare al parcheggio entro le 02:45 — navetta + check-in richiedono almeno 45 min", "Terminal 1 — è quello corretto per Wizz Air Malta a Malpensa", "Stefano: 1 bagaglio in stiva 20kg incluso", "Leidy e Sophia: solo oggetto personale (sotto al sedile), bagaglio a mano NON incluso", "Check-in online su Wizz Air già fatto il giorno prima"],
+        mapsUrl: "https://maps.google.com/?q=Milano+Malpensa+Airport+Terminal+1",
+        mapsLabel: "Malpensa Terminal 1 — Wizz Air"
       },
       {
         id: "d01a00b",
@@ -798,11 +808,11 @@ export const days = [
         id: "d16a03",
         name: "✈️ Volo ritorno — W46440",
         tag: "logistica",
-        desc: "Wizz Air W46440 · Heraklion HER → Milano MXP · 22:10–00:10+1",
-        detail: "Volo diretto Wizz Air Malta, durata 3h. Partenza da Heraklion (HER) ore 22:10, arrivo Milano Malpensa (MXP) giovedì 23 lug ore 00:10. Prenotazione: GPY5KQ · Volo numero W46440.",
-        tips: ["⚠️ Attenzione ai tempi: riconsegna auto ore 20:30, volo ore 22:10 — solo 1h40 di margine. Presentarsi al check-in subito dopo la riconsegna", "Check-in online su Wizz Air prima della partenza per risparmiare tempo in aeroporto", "Stefano: 1 bagaglio in stiva 20kg incluso"],
-        mapsUrl: "https://maps.google.com/?q=Heraklion+Airport+Crete",
-        mapsLabel: "Aeroporto Heraklion HER"
+        desc: "Wizz Air W46440 · Heraklion HER → Milano MXP T1 · 22:10–00:10+1",
+        detail: "Volo diretto Wizz Air Malta, durata 3h. Partenza da Heraklion (HER) ore 22:10, arrivo Milano Malpensa Terminal 1 ore 00:10 di giovedì 23 luglio. Prenotazione: GPY5KQ · Volo numero W46440. All'arrivo: bagagli, uscita Terminal 1 → navetta Mister Parking (gratuita, ~6 min) → recupero auto in Via Giusti 96 Somma Lombardo → pagamento in loco. Prenotazione parcheggio valida fino alle 00:30.",
+        tips: ["⚠️ Tempi stretti: riconsegna auto Autocandia ore 20:30, volo ore 22:10 — solo 1h40 di margine. Andare subito al check-in dopo la riconsegna", "All'arrivo a Malpensa T1: segui indicazioni navette parcheggi privati, cerca Mister Parking", "Tel. Mister Parking per la navetta di ritorno: +39 0331 25 65 81 · +39 348 8036626 (24h/7g)", "Paga il parcheggio direttamente in loco al ritiro dell'auto", "Prenotazione Parkos valida fino alle 00:30 del 23 lug — siete in tempo"],
+        mapsUrl: "https://maps.google.com/?q=Milano+Malpensa+Airport+Terminal+1",
+        mapsLabel: "Malpensa Terminal 1 — arrivo"
       }
     ]
   }
