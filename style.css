@@ -300,7 +300,8 @@ body {
 .tag-relax   { background: var(--done-bg); color: var(--done-text); }
 .tag-cena    { background: #fdf0c8; color: #8a6a10; }
 .tag-trekking{ background: #d8f0e0; color: #1a6a40; }
-.tag-kite    { background: #cce4ff; color: #0a3a7a; }
+.tag-kite      { background: #cce4ff; color: #0a3a7a; }
+.tag-logistica { background: #f0e8d0; color: #6a4a10; }
 
 .activity-desc {
   font-size: 12px;
@@ -546,6 +547,92 @@ body {
 }
 
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── SHUTTLE EDIT ─────────────────────────────── */
+.shuttle-edit {
+  border: 1.5px solid var(--sea-light);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  background: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shuttle-saved {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--done-text);
+  background: var(--done-bg);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.shuttle-saved-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.shuttle-call-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--done-text);
+  color: white;
+  border-radius: 99px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.shuttle-call-btn:hover { background: #1a5030; }
+
+.shuttle-field { display: flex; flex-direction: column; gap: 4px; }
+
+.shuttle-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--aegean);
+}
+
+.shuttle-input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1.5px solid var(--sand-dark);
+  border-radius: var(--radius-sm);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--white);
+}
+
+.shuttle-input:focus {
+  outline: none;
+  border-color: var(--sea);
+}
+
+.shuttle-save-btn {
+  padding: 10px;
+  background: var(--sea);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.shuttle-save-btn:hover { background: var(--aegean-md); }
 
 /* ── RESPONSIVE ────────────────────────────────── */
 @media (max-width: 480px) {

@@ -4,6 +4,7 @@ import { days, kitesurfInfo } from './data.js';
 const state = {
   done:        {},   // { activityId: true }
   dayOf:       {},   // { activityId: dayId } — attività spostate
+  shuttleInfo: {},   // { activityId: { tel, luogo } }
   openDays:    {},
   modal:       null, // { activity, dayId }
   movingId:    null,
@@ -21,8 +22,9 @@ async function loadFromFirebase() {
     const snap = await fs.getDoc(REF());
     if (snap.exists()) {
       const data = snap.data();
-      Object.assign(state.done,  data.done  || {});
-      Object.assign(state.dayOf, data.dayOf || {});
+      Object.assign(state.done,        data.done        || {});
+      Object.assign(state.dayOf,       data.dayOf       || {});
+      Object.assign(state.shuttleInfo, data.shuttleInfo || {});
     }
     setSyncStatus('synced');
   } catch (e) {
@@ -35,9 +37,10 @@ async function saveToFirebase() {
   setSyncStatus('syncing');
   try {
     await fs.setDoc(REF(), {
-      done:  state.done,
-      dayOf: state.dayOf,
-      updatedAt: new Date().toISOString()
+      done:        state.done,
+      dayOf:       state.dayOf,
+      shuttleInfo: state.shuttleInfo,
+      updatedAt:   new Date().toISOString()
     });
     setSyncStatus('synced');
   } catch (e) {
@@ -122,7 +125,8 @@ function formatDate(dateStr) {
 
 const TAG_LABELS = {
   mare: 'Mare', gita: 'Gita', cultura: 'Cultura',
-  relax: 'Relax', cena: 'Cena 🍽', trekking: 'Trekking', kite: 'Kite 🪂'
+  relax: 'Relax', cena: 'Cena 🍽', trekking: 'Trekking', kite: 'Kite 🪂',
+  logistica: 'Logistica'
 };
 
 // ─── RENDER ───────────────────────────────────────────────────────────────────
@@ -260,6 +264,42 @@ function renderKitesurfCard() {
   `;
 }
 
+function renderShuttleSection(actId) {
+  const info = state.shuttleInfo[actId] || {};
+  const hasSaved = info.tel || info.luogo;
+  return `
+    <div class="modal-section">
+      <div class="modal-section-title">🚌 Navetta ritorno — dati da salvare</div>
+      <div class="shuttle-edit">
+        ${hasSaved ? `
+        <div class="shuttle-saved">
+          ${info.tel ? `
+          <div class="shuttle-saved-row">
+            <span>📞 ${info.tel}</span>
+            <a href="tel:${info.tel.replace(/\s/g, '')}" class="shuttle-call-btn">Chiama</a>
+          </div>
+          ` : ''}
+          ${info.luogo ? `<span>📍 ${info.luogo}</span>` : ''}
+        </div>
+        ` : ''}
+        <div class="shuttle-field">
+          <label class="shuttle-label">📞 Telefono navetta</label>
+          <input id="shuttle-tel" type="tel" class="shuttle-input"
+                 placeholder="ti verrà indicato al parcheggio"
+                 value="${info.tel || ''}">
+        </div>
+        <div class="shuttle-field">
+          <label class="shuttle-label">📍 Punto di ritrovo a Malpensa</label>
+          <input id="shuttle-luogo" type="text" class="shuttle-input"
+                 placeholder="es. Uscita T1, Area navette private"
+                 value="${info.luogo || ''}">
+        </div>
+        <button class="shuttle-save-btn" id="shuttle-save">💾 Salva info navetta</button>
+      </div>
+    </div>
+  `;
+}
+
 function renderModal() {
   const { activity: a, dayId } = state.modal;
   const isDone = !!state.done[a.id];
@@ -298,6 +338,8 @@ function renderModal() {
             </a>
           </div>
           ` : ''}
+
+          ${a.editableShuttle ? renderShuttleSection(a.id) : ''}
 
           <div class="modal-section">
             <div class="modal-section-title">📅 Sposta in un altro giorno</div>
@@ -401,6 +443,19 @@ function attachEvents() {
       state.done[id] = !state.done[id];
       if (!state.done[id]) delete state.done[id];
       state.modal = null;
+      render();
+      saveToFirebase();
+    });
+  }
+
+  // Shuttle info save
+  const shuttleSave = document.getElementById('shuttle-save');
+  if (shuttleSave) {
+    shuttleSave.addEventListener('click', () => {
+      const actId = state.modal.activity.id;
+      const tel   = document.getElementById('shuttle-tel')?.value.trim()   || '';
+      const luogo = document.getElementById('shuttle-luogo')?.value.trim() || '';
+      state.shuttleInfo[actId] = { tel, luogo };
       render();
       saveToFirebase();
     });

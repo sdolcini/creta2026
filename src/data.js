@@ -44,7 +44,8 @@ export const days = [
         detail: "Mister Parking (Paga in parcheggio), Via Giuseppe Giusti 96, 21019 Somma Lombardo (VA). Prenotazione Parkos n. 6GD95HB. Parcheggio scoperto con bus navetta gratuito (6 min fino al Terminal 1 di Malpensa). Lasciare l'auto entro le 03:00 del 7 luglio per prendere il volo delle 05:30. Il parcheggio è prenotato fino al 23 luglio ore 00:30 — perfetto con l'atterraggio alle 00:10. Si paga direttamente in parcheggio al ritiro.",
         tips: ["Arrivare al parcheggio entro le 02:45 per avere margine con la navetta", "La navetta porta direttamente al Terminal 1 — quello giusto per Wizz Air Malta", "Tel. Mister Parking: +39 0331 25 65 81 oppure +39 348 8036626 (attivi 24h/7g)", "Al ritiro (23 lug ~00:30): la navetta riporta dal Terminal 1 al parcheggio", "Cancellazione gratuita fino a 24h prima — modifica su account Parkos"],
         mapsUrl: "https://maps.google.com/?q=Via+Giuseppe+Giusti+96+Somma+Lombardo+Mister+Parking",
-        mapsLabel: "Mister Parking — Somma Lombardo"
+        mapsLabel: "Mister Parking — Somma Lombardo",
+        editableShuttle: true
       }
     ]
   },
