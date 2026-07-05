@@ -395,7 +395,28 @@ body {
 
 .modal-close:hover { background: var(--sand-dark); }
 
-.modal-body { padding: 16px 20px 24px; }
+.modal-body { padding: 0 0 24px; }
+
+.modal-photo {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: var(--sand-dark);
+  margin-bottom: 16px;
+}
+
+.modal-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-body > .modal-section,
+.modal-body > .modal-done-btn {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 .modal-section {
   margin-bottom: 20px;

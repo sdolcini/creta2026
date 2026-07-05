@@ -141,7 +141,8 @@ export const days = [
         detail: "Xerokampos è una piccola baia isolata a est di Goudouras, tra le più tranquille dell'est di Creta. Sabbia chiara, acqua limpida e pochissima gente. Perfetta per famiglie: fondale basso e graduale, nessuna corrente. Portarsi tutto: ombrellone, acqua, cibo.",
         tips: ["Arrivare prima delle 10 anche se è poco frequentata, per avere il posto migliore", "Portare pranzo al sacco — non ci sono chioschi", "Lo snorkeling vicino agli scogli a sinistra è ottimo"],
         mapsUrl: "https://maps.google.com/?q=Xerokampos+beach+Crete",
-        mapsLabel: "Spiaggia di Xerokampos"
+        mapsLabel: "Spiaggia di Xerokampos",
+        photoUrl: "https://images.unsplash.com/photo-1616763866684-b215941fae5e?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d02a02",
@@ -174,7 +175,8 @@ export const days = [
         detail: "Il Palazzo di Kato Zakros è uno dei quattro grandi palazzi minoici di Creta, scoperto nel 1961. È l'unico posizionato direttamente sulla costa. Risale al 1600 a.C. circa. Visita: circa 1-1.5h. Biglietto adulti circa 4€, bambini gratis. Perfetto anche per bambini grazie alla storia del Minotauro e dei Minoici.",
         tips: ["Portare acqua e cappello — poco ombra", "Il sito apre alle 8:00, meglio andare la mattina presto", "Chiedere la mappa al botteghino all'ingresso"],
         mapsUrl: "https://maps.google.com/?q=Minoan+Palace+Kato+Zakros+Crete",
-        mapsLabel: "Palazzo Minoico Kato Zakros"
+        mapsLabel: "Palazzo Minoico Kato Zakros",
+        photoUrl: "https://images.unsplash.com/photo-1600547151285-075e218ada49?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d03a02",
@@ -184,7 +186,8 @@ export const days = [
         detail: "Dopo la visita al sito, la spiaggia di Kato Zakros è a pochi passi. Sabbia grigia con ciottoli, acqua limpidissima. C'è una piccola taverna direttamente sulla spiaggia.",
         tips: ["La taverna Zakros Beach ha buon pesce fresco", "Ottimo snorkeling sulle rocce a destra"],
         mapsUrl: "https://maps.google.com/?q=Kato+Zakros+beach+Crete",
-        mapsLabel: "Spiaggia Kato Zakros"
+        mapsLabel: "Spiaggia Kato Zakros",
+        photoUrl: "https://images.unsplash.com/photo-1627240821221-10c90724a9e1?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d03a03",
@@ -217,7 +220,8 @@ export const days = [
         detail: "Vai è famosa per la foresta di palme da dattero che la circonda — oltre 5.000 esemplari, il palmeto naturale più grande d'Europa. La spiaggia è sabbiosa, le acque calme e azzurrissime. In luglio si riempie molto dalle 10 in poi: arrivare entro le 8:30-9:00. Parcheggio a pagamento (circa 3€).",
         tips: ["Arrivare tassativamente prima delle 9:30", "Area protetta: vietato raccogliere palme o frutti", "Portare pranzo al sacco, bar in loco molto cari", "Snorkeling ottimo nella parte sinistra della baia"],
         mapsUrl: "https://maps.google.com/?q=Vai+beach+palm+forest+Crete",
-        mapsLabel: "Spiaggia di Vai"
+        mapsLabel: "Spiaggia di Vai",
+        photoUrl: "https://images.unsplash.com/photo-1734649186977-390d05b5348d?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d04a02",
@@ -227,7 +231,8 @@ export const days = [
         detail: "Il Monastero di Toplou (Moni Toplou) risale al XIV secolo e ospita ancora una comunità di monaci. Al suo interno si trova una straordinaria icona del Signore Tu Sei Grande di Ioannis Kornaros (1770). Museo annesso con oggetti sacri e documenti storici. Aperto al pubblico tutti i giorni 9:00-13:00 e 14:00-18:00. Biglietto circa 3€.",
         tips: ["Abbigliamento coperto richiesto (spalle e ginocchia coperte)", "Vendono olio d'oliva e vino biologici prodotti dal monastero — ottimi da portare a casa"],
         mapsUrl: "https://maps.google.com/?q=Toplou+Monastery+Crete",
-        mapsLabel: "Monastero di Toplou"
+        mapsLabel: "Monastero di Toplou",
+        photoUrl: "https://images.unsplash.com/photo-1637959716372-89274f10e2ca?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d04a03",
@@ -313,7 +318,8 @@ export const days = [
         detail: "La Gola di Pervolakia (nota anche come Gola di Kapsa) è a pochissimi minuti dalla base — una delle escursioni più facili e scenografiche raggiungibili da Lagada. Il sentiero è breve, circa 2 km in discesa fino al Monastero di Kapsa direttamente sul mare. Adatta a bambini da 5 anni in su. Paesaggio di rocce calcaree, vegetazione mediterranea e uccelli. Durata: 1-1.5h in discesa.",
         tips: ["Partire la mattina prima del caldo", "Scarpe chiuse — non infradito", "Il rientro è in risalita: più impegnativo. Portare acqua abbondante"],
         mapsUrl: "https://maps.google.com/?q=Kapsa+Gorge+Crete",
-        mapsLabel: "Gola di Pervolakia / Kapsa"
+        mapsLabel: "Gola di Pervolakia / Kapsa",
+        photoUrl: "https://images.unsplash.com/photo-1719525962152-e306d80920a6?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d06a02",
@@ -323,7 +329,8 @@ export const days = [
         detail: "Il Monastero di Kapsa (Moni Kapsas) è incassato tra le rocce direttamente sul mare Libico. Fondato nel XV secolo, è ancora abitato da monaci. Interno con affreschi e icone bizantine. Ingresso libero, abbigliamento rispettoso richiesto.",
         tips: ["Porta un leggero foulard per coprirsi all'ingresso", "La spiaggia sotto il monastero è accessibile"],
         mapsUrl: "https://maps.google.com/?q=Kapsa+Monastery+Crete",
-        mapsLabel: "Monastero di Kapsa"
+        mapsLabel: "Monastero di Kapsa",
+        photoUrl: "https://images.unsplash.com/photo-1617796773070-8f41ada1948e?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d06a03",
@@ -376,7 +383,8 @@ export const days = [
         detail: "Elafonissi è una delle spiagge più famose d'Europa: sabbia che tende al rosa per la presenza di frammenti di corallo, acque calme, bassissime e calde — perfette per bambini. È un'area naturale protetta. In luglio si riempie dalle 10:30 in poi con le barche da Kissamos: arrivare prima è fondamentale. Restare fino alle 14:30-15:00 poi partire verso il Ledra Maleme (~45 min).",
         tips: ["Parcheggio a pagamento ~5€ — arrivare presto o è pieno", "Portare pranzo al sacco: bar in loco costosissimi", "Area protetta: non raccogliere sabbia o conchiglie", "La laguna nord è accessibile guadando con acqua fino alle ginocchia — bellissima", "Partire entro le 15:00 per il Ledra Maleme"],
         mapsUrl: "https://maps.google.com/?q=Elafonissi+beach+Crete",
-        mapsLabel: "Spiaggia di Elafonissi"
+        mapsLabel: "Spiaggia di Elafonissi",
+        photoUrl: "https://images.unsplash.com/photo-1601836743857-4d1e6da20a32?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d07a03",
@@ -419,7 +427,8 @@ export const days = [
         detail: "Balos è forse la spiaggia più fotografata di Creta: laguna turchese con sabbia bianca e rosa, circondata da colline desertiche nella penisola di Gramvousa. Dal Ledra Maleme è solo ~30 minuti: un lusso enorme rispetto alla distanza da Lagada. Si raggiunge in due modi: 1) In auto: strada sterrata da Kaliviani, 7 km sconnessa ma percorribile con auto normale (attenzione all'assicurazione). 2) In barca da Kissamos (~30 min): circa 25-30€ adulti, metà bambini — include sosta a Gramvousa. Attenzione: con la barca gli orari sono fissi e la spiaggia si riempie.",
         tips: ["⚠️ Partenza dal Ledra Maleme alle 7:30 per arrivare prima della folla", "In auto: la sterrata è percorribile ma controlla che l'assicurazione copra strade non asfaltate", "In barca da Kissamos: prenotare il giorno prima", "Portare tutto: zero servizi in loco, bar solo a prezzi altissimi", "Parcheggio a pagamento ~3€. Si riempie presto", "Abbandonare la spiaggia entro le 14:00 — poi arrivano le barche e si affollla"],
         mapsUrl: "https://maps.google.com/?q=Balos+Lagoon+Gramvousa+Crete",
-        mapsLabel: "Laguna di Balos"
+        mapsLabel: "Laguna di Balos",
+        photoUrl: "https://images.unsplash.com/photo-1572805815879-3cfa3ec772a6?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d08a02",
@@ -429,7 +438,8 @@ export const days = [
         detail: "Se prendete la barca da Kissamos, quasi tutti i tour includono una sosta a Gramvousa: isoletta con una fortezza veneziana del 1579 arroccata sulla roccia. Vista panoramica su Balos dall'alto — spettacolare e diversa dalla spiaggia.",
         tips: ["I tour combinati Gramvousa + Balos costano circa 25-30€ adulti, metà bambini", "Prenotare online il giorno prima in luglio"],
         mapsUrl: "https://maps.google.com/?q=Gramvousa+island+fortress+Crete",
-        mapsLabel: "Isola di Gramvousa"
+        mapsLabel: "Isola di Gramvousa",
+        photoUrl: "https://images.unsplash.com/photo-1745331383290-2fe806c74bd8?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d08a03",
@@ -472,7 +482,8 @@ export const days = [
         detail: "Votsalaki è una piccola spiaggia di sassi bianchi a pochi minuti dall'appartamento, meno frequentata della spiaggia principale. Acqua cristallina, ombra naturale con qualche arbusto. Ideale per una giornata di vero riposo dopo i giorni intensi di Elafonissi e Balos.",
         tips: ["Porta tutto: nessun servizio in loco", "Snorkeling eccellente lungo la scogliera a sinistra"],
         mapsUrl: "https://maps.google.com/?q=Votsalaki+beach+Goudouras+Crete",
-        mapsLabel: "Spiaggia Votsalaki"
+        mapsLabel: "Spiaggia Votsalaki",
+        photoUrl: "https://images.unsplash.com/photo-1561917657-09bd994eb04a?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d09a02",
@@ -505,7 +516,8 @@ export const days = [
         detail: "Agios Nikolaos è una delle città più scenografiche di Creta. Il suo elemento distintivo è il lago Voulismeni, collegato al mare da un canale artificiale — un posto unico al mondo. Passeggiata sul lungomare, boutique, musei. Il Museo Archeologico di Agios Nikolaos è uno dei migliori di Creta.",
         tips: ["Parcheggio gratuito fuori dal centro, poi a piedi", "Il lago Voulismeni è bellissimo al tramonto — torna per la cena"],
         mapsUrl: "https://maps.google.com/?q=Agios+Nikolaos+lake+Crete",
-        mapsLabel: "Lago Voulismeni, Agios Nikolaos"
+        mapsLabel: "Lago Voulismeni, Agios Nikolaos",
+        photoUrl: "https://images.unsplash.com/photo-1727622918878-02dc80642adb?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d10a02",
@@ -515,7 +527,8 @@ export const days = [
         detail: "Spinalonga è una delle destinazioni più affascinanti di Creta. L'isola fu l'ultima colonia per lebbrosi d'Europa, attiva fino al 1957. Le barche partono da Agios Nikolaos o dal porto di Plaka (più vicino a ~40 min da Lagada). Visita all'isola: 1-1.5h. Biglietto ingresso circa 8€. Le barche costano circa 15-20€ A/R.",
         tips: ["Prenotare i biglietti online in alta stagione", "Da Plaka il tragitto in barca è più breve (10 min) e più economico", "Portare acqua — sull'isola fa molto caldo"],
         mapsUrl: "https://maps.google.com/?q=Spinalonga+island+Crete",
-        mapsLabel: "Isola di Spinalonga"
+        mapsLabel: "Isola di Spinalonga",
+        photoUrl: "https://images.unsplash.com/photo-1603916652356-0f472d5ed12b?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d10a03",
@@ -548,7 +561,8 @@ export const days = [
         detail: "Il Palazzo di Cnosso è il più grande sito minoico del Mediterraneo, risalente al 2000 a.C. Il sito è associato alla leggenda del Minotauro e del Labirinto — perfetto per catturare l'immaginazione dei bambini. Visita: 2-3 ore. Biglietto: 15€ adulti, gratuito sotto i 18 anni. Apre alle 8:00 — consigliato arrivarci all'apertura.",
         tips: ["Comprare biglietti online — evita la coda in luglio", "Prendere l'audioguida o una guida locale: senza contesto il sito è difficile da leggere", "Cappello e acqua — pochissima ombra", "Evita le ore 11-14: caldo e folla massimi"],
         mapsUrl: "https://maps.google.com/?q=Palace+of+Knossos+Heraklion+Crete",
-        mapsLabel: "Palazzo di Cnosso"
+        mapsLabel: "Palazzo di Cnosso",
+        photoUrl: "https://images.unsplash.com/photo-1746109055692-39e2fb53f5a8?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d11a02",
@@ -558,7 +572,8 @@ export const days = [
         detail: "Heraklion ha un centro storico veneziano notevole: la Fontana Morosini, il porto con la fortezza Koules, Piazza Eleftherias. Il Museo Archeologico di Heraklion è uno dei migliori della Grecia (collezione minoica unica al mondo) — ma è impegnativo: se la bambina è stanca, salta.",
         tips: ["Museo Arch.: chiuso il lunedì, orari 8-20 estate", "Il mercato coperto (Agora) è interessante per lo shopping di formaggi e spezie"],
         mapsUrl: "https://maps.google.com/?q=Heraklion+old+city+center+Crete",
-        mapsLabel: "Centro storico Heraklion"
+        mapsLabel: "Centro storico Heraklion",
+        photoUrl: "https://images.unsplash.com/photo-1586119732042-ff23ccf4bd23?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d11a03",
@@ -664,7 +679,8 @@ export const days = [
         detail: "Koufonissi (o Gaidouronisi) è un'isola disabitata al largo di Ierapetra, considerata una delle più belle della Grecia. Ha spiagge di sabbia bianchissima con acque turchesi caraibiche. Le barche partono da Ierapetra (~30 min da Lagada). Gita organizzata con tour operator circa 25-30€ a persona adulti, bambini solitamente metà prezzo.",
         tips: ["Prenotare il giorno prima — le barche si riempiono in luglio", "Portare crema solare abbondante e cappello (zero ombra sull'isola)", "Vietato raccogliere sabbia o conchiglie — area protetta"],
         mapsUrl: "https://maps.google.com/?q=Chryssi+Island+Ierapetra+Crete",
-        mapsLabel: "Koufonisi / Isola di Chryssi"
+        mapsLabel: "Koufonisi / Isola di Chryssi",
+        photoUrl: "https://images.unsplash.com/photo-1635882387457-0958fb8320cc?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d13a03",
@@ -697,7 +713,8 @@ export const days = [
         detail: "La Gola di Richtis è uno dei percorsi naturalistici più belli dell'est Creta, molto meno frequentato delle Samaria. Il sentiero scende per circa 2 km attraverso una vegetazione lussureggiante — ulivi selvatici, oleandri, platani — lungo il fiume Richtis fino alla cascata che sfocia direttamente sul mare. Dislivello contenuto, sentiero ben segnalato. Adatta a bambini da 5 anni in su. Durata: 1-1.5h in discesa, stessa in risalita.",
         tips: ["Partire la mattina presto per evitare il caldo nel canyon", "Scarpe chiuse con buona suola — il terreno è scivoloso vicino all'acqua", "Portare almeno 1,5 litri d'acqua a persona", "Il sentiero inizia vicino al villaggio di Exo Mouliana — segui le indicazioni per Richtis Gorge", "La cascata è alta circa 15 metri — spettacolare anche in luglio"],
         mapsUrl: "https://maps.google.com/?q=Richtis+Gorge+Crete",
-        mapsLabel: "Gola di Richtis"
+        mapsLabel: "Gola di Richtis",
+        photoUrl: "https://images.unsplash.com/photo-1575237579976-4d4219f1860f?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d14a02",
@@ -707,7 +724,8 @@ export const days = [
         detail: "La cascata di Richtis è la più alta di Creta orientale. Dopo la discesa nella gola si apre su una piccola spiaggia di sassi dove la cascata sfocia nel mare. L'acqua è fresca e limpidissima — uno dei bagni più belli del viaggio. La spiaggia è raggiungibile solo a piedi, quindi sempre poco affollata.",
         tips: ["Porta sandali da scoglio per camminare vicino alla cascata", "L'acqua è fresca anche in luglio — perfetta dopo il cammino"],
         mapsUrl: "https://maps.google.com/?q=Richtis+waterfall+beach+Crete",
-        mapsLabel: "Cascata e spiaggia Richtis"
+        mapsLabel: "Cascata e spiaggia Richtis",
+        photoUrl: "https://images.unsplash.com/photo-1674149091778-33d21429dbf0?w=700&q=80&fit=crop&auto=format"
       },
       {
         id: "d14a03",

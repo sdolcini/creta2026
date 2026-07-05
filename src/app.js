@@ -436,6 +436,12 @@ function renderModal() {
           </div>
           ` : ''}
 
+          ${a.photoUrl ? `
+          <div class="modal-photo">
+            <img src="${a.photoUrl}" alt="${a.name}" loading="lazy" />
+          </div>
+          ` : ''}
+
           ${a.mapsUrl ? `
           <div class="modal-section">
             <div class="modal-section-title">🗺 Mappa</div>
