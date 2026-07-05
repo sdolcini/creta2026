@@ -2,14 +2,16 @@ import { days, kitesurfInfo } from './data.js';
 
 // ─── STATE ────────────────────────────────────────────────────────────────────
 const state = {
-  done:        {},   // { activityId: true }
-  dayOf:       {},   // { activityId: dayId } — attività spostate
-  shuttleInfo: {},   // { activityId: { tel, luogo } }
-  openDays:    {},
-  modal:       null, // { activity, dayId }
-  movingId:    null,
-  activeWeek:  0,    // 0 = prima settimana, 1 = seconda
-  syncStatus:  'syncing' // syncing | synced | error
+  done:          {},   // { activityId: true }
+  dayOf:         {},   // { activityId: dayId } — attività spostate
+  dayTitleSwap:  {},   // { dayId: sourceDayId } — scambia titolo/emoji/meta
+  shuttleInfo:   {},   // { activityId: { tel, luogo } }
+  openDays:      {},
+  modal:         null, // { activity, dayId }
+  movingId:      null,
+  swappingDayId: null,
+  activeWeek:    0,
+  syncStatus:    'syncing'
 };
 
 // ─── FIREBASE ─────────────────────────────────────────────────────────────────
@@ -22,9 +24,10 @@ async function loadFromFirebase() {
     const snap = await fs.getDoc(REF());
     if (snap.exists()) {
       const data = snap.data();
-      Object.assign(state.done,        data.done        || {});
-      Object.assign(state.dayOf,       data.dayOf       || {});
-      Object.assign(state.shuttleInfo, data.shuttleInfo || {});
+      Object.assign(state.done,         data.done         || {});
+      Object.assign(state.dayOf,        data.dayOf        || {});
+      Object.assign(state.dayTitleSwap, data.dayTitleSwap || {});
+      Object.assign(state.shuttleInfo,  data.shuttleInfo  || {});
     }
     setSyncStatus('synced');
   } catch (e) {
@@ -37,10 +40,11 @@ async function saveToFirebase() {
   setSyncStatus('syncing');
   try {
     await fs.setDoc(REF(), {
-      done:        state.done,
-      dayOf:       state.dayOf,
-      shuttleInfo: state.shuttleInfo,
-      updatedAt:   new Date().toISOString()
+      done:         state.done,
+      dayOf:        state.dayOf,
+      dayTitleSwap: state.dayTitleSwap,
+      shuttleInfo:  state.shuttleInfo,
+      updatedAt:    new Date().toISOString()
     });
     setSyncStatus('synced');
   } catch (e) {
@@ -96,6 +100,36 @@ function findActivityById(id) {
 function getDayActivities(dayId) {
   const map = buildDayMap();
   return map[dayId]?.activities || [];
+}
+
+function swapDays(dayIdA, dayIdB) {
+  // Scambia attività
+  const actsA = getDayActivities(dayIdA).map(a => a.id);
+  const actsB = getDayActivities(dayIdB).map(a => a.id);
+  actsA.forEach(actId => {
+    const orig = days.find(d => d.activities.some(a => a.id === actId))?.id;
+    if (orig === dayIdB) delete state.dayOf[actId];
+    else state.dayOf[actId] = dayIdB;
+  });
+  actsB.forEach(actId => {
+    const orig = days.find(d => d.activities.some(a => a.id === actId))?.id;
+    if (orig === dayIdA) delete state.dayOf[actId];
+    else state.dayOf[actId] = dayIdA;
+  });
+
+  // Scambia titolo/emoji/meta
+  const prevA = state.dayTitleSwap[dayIdA] || dayIdA;
+  const prevB = state.dayTitleSwap[dayIdB] || dayIdB;
+  // Se erano già scambiati tra loro, ripristina originale
+  if (prevA === dayIdB && prevB === dayIdA) {
+    delete state.dayTitleSwap[dayIdA];
+    delete state.dayTitleSwap[dayIdB];
+  } else {
+    state.dayTitleSwap[dayIdA] = prevB;
+    state.dayTitleSwap[dayIdB] = prevA;
+  }
+
+  console.log('swapDays', dayIdA, '↔', dayIdB, '| dayOf entries:', Object.keys(state.dayOf).length, '| titleSwap:', JSON.stringify(state.dayTitleSwap));
 }
 
 function countDone(dayId) {
@@ -164,6 +198,13 @@ function render() {
       </button>
     </div>
 
+    ${state.swappingDayId ? `
+    <div class="swap-banner">
+      <span>↕ Tocca ⇄ su un'altra giornata per scambiare</span>
+      <button class="swap-cancel-btn" data-cancelswap>Annulla</button>
+    </div>
+    ` : ''}
+
     <main class="main" id="main-content">
       ${getWeekDays(state.activeWeek).map(renderDayCard).join('')}
 
@@ -180,12 +221,18 @@ function renderDayCard(day) {
   const acts = getDayActivities(day.id);
   const done = countDone(day.id);
   const isOpen = state.openDays[day.id];
+  const isSwapping = state.swappingDayId === day.id;
+  const isSwapTarget = state.swappingDayId && !isSwapping;
+  // Data badge: sempre la data di calendario reale
   const d = new Date(day.date + 'T00:00:00');
   const dayNum = d.getDate();
   const month = d.toLocaleDateString('it-IT', { month: 'short' }).slice(0,3);
+  // Titolo/emoji/meta: dal giorno sorgente se scambiato
+  const metaSrcId = state.dayTitleSwap[day.id] || day.id;
+  const meta = days.find(d => d.id === metaSrcId) || day;
 
   return `
-    <div class="day-card${isOpen ? ' open' : ''}" data-dayid="${day.id}">
+    <div class="day-card${isOpen ? ' open' : ''}${isSwapping ? ' swap-selecting' : ''}${isSwapTarget ? ' swap-target' : ''}" data-dayid="${day.id}">
       <div class="day-header" data-toggle="${day.id}">
         <div class="day-date-badge">
           <span class="day-num">${dayNum}</span>
@@ -193,14 +240,15 @@ function renderDayCard(day) {
         </div>
         <div class="day-info">
           <div class="day-title">
-            ${day.emoji} ${day.title}
+            ${meta.emoji} ${meta.title}
           </div>
           <div class="day-meta">
-            <span>${day.label}</span>
-            ${day.distanza ? `<span>🚗 ${day.distanza}</span>` : ''}
+            <span>${meta.label}</span>
+            ${meta.distanza ? `<span>🚗 ${meta.distanza}</span>` : ''}
             <span class="day-progress-mini">${done}/${acts.length}</span>
           </div>
         </div>
+        <button class="day-swap-btn${isSwapping ? ' active' : ''}" data-swapday="${day.id}" title="Scambia giornata">⇄</button>
         <span class="day-expand-icon">▾</span>
       </div>
       <div class="activity-list">
@@ -381,6 +429,35 @@ function renderModal() {
 
 // ─── EVENTS ───────────────────────────────────────────────────────────────────
 function attachEvents() {
+  // Annulla swap
+  const cancelSwap = document.querySelector('[data-cancelswap]');
+  if (cancelSwap) cancelSwap.addEventListener('click', () => {
+    state.swappingDayId = null;
+    render();
+  });
+
+  // Pulsante ⇄ — entra in swap mode, annulla, o completa lo swap
+  document.querySelectorAll('[data-swapday]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const dayId = el.dataset.swapday;
+      if (!state.swappingDayId) {
+        state.swappingDayId = dayId;
+        render();
+      } else if (state.swappingDayId === dayId) {
+        state.swappingDayId = null;
+        render();
+      } else {
+        swapDays(state.swappingDayId, dayId);
+        state.openDays[state.swappingDayId] = true;
+        state.openDays[dayId] = true;
+        state.swappingDayId = null;
+        render();
+        saveToFirebase();
+      }
+    });
+  });
+
   // Week tabs
   document.querySelectorAll('.week-tab').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -389,12 +466,21 @@ function attachEvents() {
     });
   });
 
-  // Toggle day open/close
+  // Toggle day open/close — in modalità swap completa lo scambio
   document.querySelectorAll('[data-toggle]').forEach(el => {
     el.addEventListener('click', () => {
       const id = el.dataset.toggle;
-      state.openDays[id] = !state.openDays[id];
-      render();
+      if (state.swappingDayId && state.swappingDayId !== id) {
+        swapDays(state.swappingDayId, id);
+        state.openDays[state.swappingDayId] = true;
+        state.openDays[id] = true;
+        state.swappingDayId = null;
+        render();
+        saveToFirebase();
+      } else {
+        state.openDays[id] = !state.openDays[id];
+        render();
+      }
     });
   });
 

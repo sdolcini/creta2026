@@ -525,6 +525,76 @@ body {
 
 .move-confirm-btn:hover { background: var(--aegean-md); }
 
+/* ── DAY SWAP ──────────────────────────────────── */
+.swap-banner {
+  max-width: 680px;
+  margin: 10px auto 0;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--aegean);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+}
+
+.swap-cancel-btn {
+  background: rgba(255,255,255,0.18);
+  border: none;
+  border-radius: 99px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+
+.swap-cancel-btn:hover { background: rgba(255,255,255,0.3); }
+
+.day-swap-btn {
+  background: none;
+  border: 1.5px solid var(--sand-dark);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 14px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s;
+  margin-right: 4px;
+}
+
+.day-swap-btn:hover { border-color: var(--sea); color: var(--aegean); }
+
+.day-swap-btn.active {
+  background: var(--aegean);
+  border-color: var(--aegean);
+  color: white;
+}
+
+.day-card.swap-selecting {
+  outline: 2px solid var(--aegean);
+  outline-offset: 2px;
+}
+
+.day-card.swap-target {
+  outline: 2px dashed var(--sea);
+  outline-offset: 2px;
+  cursor: pointer;
+}
+
+.day-card.swap-target .day-header { background: var(--sea-light); }
+
 /* ── LOADING / EMPTY ───────────────────────────── */
 .loading-screen {
   display: flex;
