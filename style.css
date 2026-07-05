@@ -525,6 +525,69 @@ body {
 
 .move-confirm-btn:hover { background: var(--aegean-md); }
 
+/* ── RESET BUTTON ─────────────────────────────── */
+.reset-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: white;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.reset-btn:hover { background: rgba(255,255,255,0.28); }
+
+/* ── RESET MODAL OPTIONS ───────────────────────── */
+.reset-option-btn {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--sand-dark);
+  background: var(--white);
+  cursor: pointer;
+  text-align: left;
+  margin-bottom: 10px;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.reset-option-btn:hover { background: var(--sand); }
+
+.reset-option-btn.reset-all { border-color: #e08080; }
+.reset-option-btn.reset-all:hover { background: #fff0f0; }
+
+.reset-option-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.reset-option-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.reset-option-text strong {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.reset-option-text span {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
 /* ── DAY SWAP ──────────────────────────────────── */
 .swap-banner {
   max-width: 680px;

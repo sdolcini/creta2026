@@ -10,6 +10,7 @@ const state = {
   modal:         null, // { activity, dayId }
   movingId:      null,
   swappingDayId: null,
+  resetModal:    false,
   activeWeek:    0,
   syncStatus:    'syncing'
 };
@@ -180,11 +181,14 @@ function render() {
             7–22 luglio · Lagada Bay Resort
           </div>
         </div>
-        <div class="progress-ring">
-          <div class="progress-bar-wrap">
-            <div class="progress-bar-fill" style="width:${pct}%"></div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="progress-ring">
+            <div class="progress-bar-wrap">
+              <div class="progress-bar-fill" style="width:${pct}%"></div>
+            </div>
+            <div class="progress-label">${done}/${total} attività</div>
           </div>
-          <div class="progress-label">${done}/${total} attività</div>
+          <button class="reset-btn" id="open-reset" title="Reset modifiche">↺</button>
         </div>
       </div>
     </header>
@@ -212,6 +216,7 @@ function render() {
     </main>
 
     ${state.modal ? renderModal() : ''}
+    ${state.resetModal ? renderResetModal() : ''}
   `;
 
   attachEvents();
@@ -362,6 +367,45 @@ function renderShuttleSection(actId) {
   `;
 }
 
+function renderResetModal() {
+  return `
+    <div class="modal-backdrop" id="reset-backdrop">
+      <div class="modal">
+        <div class="modal-handle"></div>
+        <div class="modal-header">
+          <div class="modal-title">↺ Reset modifiche</div>
+          <button class="modal-close" id="reset-close">✕</button>
+        </div>
+        <div class="modal-body">
+          <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px">
+            Cosa vuoi azzerare?
+          </p>
+
+          <button class="reset-option-btn reset-moves" id="reset-moves">
+            <span class="reset-option-icon">↕</span>
+            <span class="reset-option-text">
+              <strong>Solo spostamenti</strong>
+              <span>Cancella spostamenti di attività e scambi di giornate. Mantieni le spunte e le info navetta.</span>
+            </span>
+          </button>
+
+          <button class="reset-option-btn reset-all" id="reset-all">
+            <span class="reset-option-icon">🗑</span>
+            <span class="reset-option-text">
+              <strong>Reset completo</strong>
+              <span>Cancella tutto: spostamenti, spunte e info navetta.</span>
+            </span>
+          </button>
+
+          <button class="modal-done-btn is-done" id="reset-cancel" style="margin-top:8px">
+            Annulla
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function renderModal() {
   const { activity: a, dayId } = state.modal;
   const isDone = !!state.done[a.id];
@@ -429,6 +473,42 @@ function renderModal() {
 
 // ─── EVENTS ───────────────────────────────────────────────────────────────────
 function attachEvents() {
+  // Reset modal
+  document.getElementById('open-reset')?.addEventListener('click', () => {
+    state.resetModal = true;
+    render();
+  });
+  document.getElementById('reset-close')?.addEventListener('click', () => {
+    state.resetModal = false;
+    render();
+  });
+  document.getElementById('reset-cancel')?.addEventListener('click', () => {
+    state.resetModal = false;
+    render();
+  });
+  document.getElementById('reset-backdrop')?.addEventListener('click', (e) => {
+    if (e.target === document.getElementById('reset-backdrop')) {
+      state.resetModal = false;
+      render();
+    }
+  });
+  document.getElementById('reset-moves')?.addEventListener('click', () => {
+    state.dayOf        = {};
+    state.dayTitleSwap = {};
+    state.resetModal   = false;
+    render();
+    saveToFirebase();
+  });
+  document.getElementById('reset-all')?.addEventListener('click', () => {
+    state.done         = {};
+    state.dayOf        = {};
+    state.dayTitleSwap = {};
+    state.shuttleInfo  = {};
+    state.resetModal   = false;
+    render();
+    saveToFirebase();
+  });
+
   // Annulla swap
   const cancelSwap = document.querySelector('[data-cancelswap]');
   if (cancelSwap) cancelSwap.addEventListener('click', () => {
