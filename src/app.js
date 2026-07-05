@@ -264,6 +264,31 @@ function renderKitesurfCard() {
   `;
 }
 
+function renderShuttleRecovery(sourceActId) {
+  const info = state.shuttleInfo[sourceActId] || {};
+  const hasSaved = info.tel || info.luogo;
+  return `
+    <div class="modal-section">
+      <div class="modal-section-title">🚌 Navetta — info di recupero</div>
+      ${hasSaved ? `
+      <div class="shuttle-saved">
+        ${info.tel ? `
+        <div class="shuttle-saved-row">
+          <span>📞 ${info.tel}</span>
+          <a href="tel:${info.tel.replace(/\s/g, '')}" class="shuttle-call-btn">Chiama</a>
+        </div>
+        ` : ''}
+        ${info.luogo ? `<span>📍 ${info.luogo}</span>` : ''}
+      </div>
+      ` : `
+      <div class="shuttle-missing">
+        ⚠️ Nessun dato salvato — aprire l'attività del parcheggio nel giorno 0 per salvare il numero e il punto di ritrovo.
+      </div>
+      `}
+    </div>
+  `;
+}
+
 function renderShuttleSection(actId) {
   const info = state.shuttleInfo[actId] || {};
   const hasSaved = info.tel || info.luogo;
@@ -271,17 +296,6 @@ function renderShuttleSection(actId) {
     <div class="modal-section">
       <div class="modal-section-title">🚌 Navetta ritorno — dati da salvare</div>
       <div class="shuttle-edit">
-        ${hasSaved ? `
-        <div class="shuttle-saved">
-          ${info.tel ? `
-          <div class="shuttle-saved-row">
-            <span>📞 ${info.tel}</span>
-            <a href="tel:${info.tel.replace(/\s/g, '')}" class="shuttle-call-btn">Chiama</a>
-          </div>
-          ` : ''}
-          ${info.luogo ? `<span>📍 ${info.luogo}</span>` : ''}
-        </div>
-        ` : ''}
         <div class="shuttle-field">
           <label class="shuttle-label">📞 Telefono navetta</label>
           <input id="shuttle-tel" type="tel" class="shuttle-input"
@@ -339,7 +353,8 @@ function renderModal() {
           </div>
           ` : ''}
 
-          ${a.editableShuttle ? renderShuttleSection(a.id) : ''}
+          ${a.editableShuttle    ? renderShuttleSection(a.id) : ''}
+          ${a.showShuttleRecovery ? renderShuttleRecovery(a.shuttleSourceId) : ''}
 
           <div class="modal-section">
             <div class="modal-section-title">📅 Sposta in un altro giorno</div>

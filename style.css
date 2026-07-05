@@ -595,6 +595,14 @@ body {
 
 .shuttle-call-btn:hover { background: #1a5030; }
 
+.shuttle-missing {
+  font-size: 13px;
+  color: #8a4a10;
+  background: var(--terra-lt);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
 .shuttle-field { display: flex; flex-direction: column; gap: 4px; }
 
 .shuttle-label {

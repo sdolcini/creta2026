@@ -814,6 +814,18 @@ export const days = [
         tips: ["⚠️ Tempi stretti: riconsegna auto Autocandia ore 20:30, volo ore 22:10 — solo 1h40 di margine. Andare subito al check-in dopo la riconsegna", "All'arrivo a Malpensa T1: segui indicazioni navette parcheggi privati, cerca Mister Parking", "Tel. Mister Parking per la navetta di ritorno: +39 0331 25 65 81 · +39 348 8036626 (24h/7g)", "Paga il parcheggio direttamente in loco al ritiro dell'auto", "Prenotazione Parkos valida fino alle 00:30 del 23 lug — siete in tempo"],
         mapsUrl: "https://maps.google.com/?q=Milano+Malpensa+Airport+Terminal+1",
         mapsLabel: "Malpensa Terminal 1 — arrivo"
+      },
+      {
+        id: "d16a04",
+        name: "🚌 Recupero auto — navetta Mister Parking",
+        tag: "logistica",
+        desc: "Navetta gratuita T1 → Via Giusti 96, Somma Lombardo · prenotazione 6GD95HB",
+        detail: "All'uscita del Terminal 1 di Malpensa cerca la navetta Mister Parking (gratuita, ~6 min). Indirizzo parcheggio: Via Giuseppe Giusti 96, 21019 Somma Lombardo (VA). Prenotazione Parkos rif. 6GD95HB, valida fino alle 00:30 del 23 luglio. Paga il parcheggio direttamente in loco al ritiro dell'auto.",
+        tips: ["Segui le indicazioni 'navette parcheggi privati' all'uscita bagagli del T1", "La navetta impiega circa 6 minuti fino al parcheggio", "Prenotazione valida fino alle 00:30 — siete in tempo con l'atterraggio alle 00:10"],
+        mapsUrl: "https://maps.google.com/?q=Via+Giuseppe+Giusti+96+Somma+Lombardo+Mister+Parking",
+        mapsLabel: "Mister Parking — Somma Lombardo",
+        showShuttleRecovery: true,
+        shuttleSourceId: "d00a03"
       }
     ]
   }
