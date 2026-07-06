@@ -61,6 +61,8 @@ export const days = [
         tips: ["Arrivare al parcheggio entro le 02:45 per avere margine con la navetta", "La navetta porta direttamente al Terminal 1 — quello giusto per Wizz Air Malta", "Tel. Mister Parking: +39 0331 25 65 81 oppure +39 348 8036626 (attivi 24h/7g)", "Al ritiro (23 lug ~00:30): la navetta riporta dal Terminal 1 al parcheggio", "Cancellazione gratuita fino a 24h prima — modifica su account Parkos"],
         mapsUrl: "https://maps.google.com/?q=Via+Giuseppe+Giusti+96+Somma+Lombardo+Mister+Parking",
         mapsLabel: "Mister Parking — Somma Lombardo",
+        pdfUrl: "docs/MisterParking.pdf",
+        pdfLabel: "Prenotazione Mister Parking",
         editableShuttle: true
       }
     ]
@@ -94,7 +96,9 @@ export const days = [
         detail: "Autocandia, Kazantzakis Airport, Iraklio, Crete, 71500. Conf. 9MJF07 · Numero volo da mostrare: WMT6439. Peugeot 208 o similare, cambio manuale, km illimitati, assicurazione inclusa. Deposito cauzionale: 700€ (carta di credito fisica MasterCard/Visa, no prepagata). Riconsegna: mer 22 lug ore 20:30 stesso luogo.",
         tips: ["Esci dall'edificio Arrivi e attraversa la strada a destra", "Accanto alla stazione degli autobus, sali i gradini verso il parcheggio", "Portare: patente fisica, voucher stampato, carta di credito con sufficiente plafond", "Restituire con serbatoio allo stesso livello del ritiro", "Tel. Autocandia: +302814260270"],
         mapsUrl: "https://maps.google.com/?q=Heraklion+Airport+Crete",
-        mapsLabel: "Aeroporto Heraklion — Autocandia"
+        mapsLabel: "Aeroporto Heraklion — Autocandia",
+        pdfUrl: "docs/AutoCandia.pdf",
+        pdfLabel: "Voucher noleggio Autocandia"
       },
       {
         id: "d01a01",
@@ -104,7 +108,9 @@ export const days = [
         detail: "Lagada Resort, 1 km Makrigialos–Goudouras, Makrigialos 72055. Appartamento con vista piscina e mare, 2 adulti + 1 bambino (8 anni). Check-in: 15:00–23:00. Check-out: 22 lug 08:00–11:00. Tel: +30 694 848 6850. GPS: N 035°1.804, E 26°0.125.",
         tips: ["Avvisare il resort dell'orario di arrivo previsto (verranno prima delle 15:00 dall'aeroporto)", "Parcheggio privato gratuito on site", "WiFi gratuita in tutte le aree", "Prenotare online su Booking.com per modifiche: conf. 5980.580.483"],
         mapsUrl: "https://maps.google.com/?q=N+35.030067,+E+26.002083",
-        mapsLabel: "Lagada Resort"
+        mapsLabel: "Lagada Resort",
+        pdfUrl: "docs/LagadaResort.pdf",
+        pdfLabel: "Prenotazione Lagada Resort"
       },
       {
         id: "d01a02",
@@ -410,7 +416,9 @@ export const days = [
         detail: "Ledra Maleme Hotel, Maleme, Chania, Creta. Hotel 3 stelle, 150 metri dalla spiaggia, piscina con bar, ristorante cretese, parcheggio gratuito. Rating 9/10 su Booking. Check-in dalle 14:00, check-out entro le 12:00. Posizione strategica: 45 min da Elafonissi, 30 min da Balos/Kissamos, 20 min da Chania.",
         tips: ["Avvisare l'hotel dell'orario di arrivo (fine pomeriggio)", "Parcheggio privato gratuito on site", "Ristorante cretese in loco — ottimo per la cena"],
         mapsUrl: "https://maps.google.com/?q=Ledra+Maleme+Hotel+Maleme+Crete",
-        mapsLabel: "Ledra Maleme Hotel"
+        mapsLabel: "Ledra Maleme Hotel",
+        pdfUrl: "docs/LedraMalemeHotel.pdf",
+        pdfLabel: "Prenotazione Ledra Maleme Hotel"
       },
       {
         id: "d07a04",

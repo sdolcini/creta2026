@@ -482,6 +482,15 @@ function renderModal() {
           </div>
           ` : ''}
 
+          ${a.pdfUrl ? `
+          <div class="modal-section">
+            <div class="modal-section-title">📎 Allegato</div>
+            <a href="${a.pdfUrl}" target="_blank" class="modal-pdf-btn">
+              📄 ${a.pdfLabel || 'Apri documento'}
+            </a>
+          </div>
+          ` : ''}
+
           ${a.mapsUrl ? `
           <div class="modal-section">
             <div class="modal-section-title">🗺 Mappa</div>
