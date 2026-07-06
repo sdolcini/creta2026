@@ -17,6 +17,22 @@ export const days = [
     distanza: null,
     activities: [
       {
+        id: "d00a00",
+        name: "📱 Scarica mappe offline — Google Maps",
+        tag: "logistica",
+        desc: "Scarica Creta offline prima di partire — naviga senza dati roaming.",
+        detail: `Senza mappe offline rischi di restare senza navigazione nelle zone rurali di Creta (Xerokampos, gola di Richtis, Balos) dove il segnale è assente. Fallo oggi con il WiFi di casa.<div class="os-box os-box-ios"><div class="os-box-title">📱 iPhone</div><ol><li>Apri <strong>Google Maps</strong> → foto profilo → <em>Download aree offline</em></li><li>Cerca "Crete, Greece" e scarica (circa 250 MB)</li><li>Oppure: <strong>Maps.me</strong> dall'App Store → Mappe → Grecia → Creta</li><li>Oppure: <strong>Apple Maps</strong> → cerca Creta → tocca (i) → <em>Scarica</em></li></ol></div><div class="os-box os-box-android"><div class="os-box-title">🤖 Android</div><ol><li>Apri <strong>Google Maps</strong> → foto profilo → <em>Mappe offline</em></li><li>Centra la mappa su Creta → <em>Scarica</em> (circa 250 MB)</li><li>Oppure: <strong>Maps.me</strong> dal Play Store → Mappe → Grecia → Creta</li></ol></div>`,
+        tips: [
+          "Fallo con WiFi di casa — i file pesano 200-300 MB",
+          "Google Maps: le mappe offline scadono dopo 30 giorni — ok per il viaggio",
+          "Maps.me (gratuito): ottima alternativa, include sentieri e punti di interesse locali",
+          "Su iPhone: se usi Apple Maps, scarica la regione da Mappe → (i) → Scarica",
+          "Scarica anche le mappe di Heraklion e Chania per i giorni di gita"
+        ],
+        mapsUrl: null,
+        mapsLabel: null
+      },
+      {
         id: "d00a01",
         name: "✈️ Check-in online Wizz Air",
         tag: "logistica",
