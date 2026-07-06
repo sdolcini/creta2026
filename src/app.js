@@ -275,7 +275,7 @@ function renderActivity(a, dayId) {
   const isDone = !!state.done[a.id];
   return `
     <div class="activity-item${isDone ? ' done' : ''}" data-actid="${a.id}" data-dayid="${dayId}">
-      <div class="activity-check" data-check="${a.id}">
+      <div class="activity-check${state.editUnlocked ? '' : ' check-locked'}" ${state.editUnlocked ? `data-check="${a.id}"` : ''}>
         <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
           <path d="M1 5l3.5 3.5L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -483,9 +483,10 @@ function renderModal() {
           </div>
           ` : ''}
 
-          ${a.editableShuttle    ? renderShuttleSection(a.id) : ''}
+          ${a.editableShuttle    ? (state.editUnlocked ? renderShuttleSection(a.id) : '') : ''}
           ${a.showShuttleRecovery ? renderShuttleRecovery(a.shuttleSourceId) : ''}
 
+          ${state.editUnlocked ? `
           <div class="modal-section">
             <div class="modal-section-title">📅 Sposta in un altro giorno</div>
             <div class="move-section">
@@ -502,6 +503,7 @@ function renderModal() {
           <button class="modal-done-btn ${isDone ? 'is-done' : 'not-done'}" id="toggle-done">
             ${isDone ? '✅ Fatto! Segna come da fare' : '☑️ Segna come fatto'}
           </button>
+          ` : ''}
 
         </div>
       </div>

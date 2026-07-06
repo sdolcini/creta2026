@@ -272,6 +272,8 @@ body {
 .activity-check svg { display: none; }
 .activity-item.done .activity-check svg { display: block; }
 
+.activity-check.check-locked { cursor: default; pointer-events: none; }
+
 .activity-body { flex: 1; min-width: 0; }
 
 .activity-name {
