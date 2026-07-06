@@ -12,7 +12,11 @@ const state = {
   swappingDayId: null,
   resetModal:    false,
   activeWeek:    0,
-  syncStatus:    'syncing'
+  syncStatus:    'syncing',
+  editUnlocked:  localStorage.getItem('editUnlocked') === '1',
+  pinModal:      false,
+  pinValue:      '',
+  pinError:      false
 };
 
 // ─── FIREBASE ─────────────────────────────────────────────────────────────────
@@ -188,7 +192,10 @@ function render() {
             </div>
             <div class="progress-label">${done}/${total} attività</div>
           </div>
-          <button class="reset-btn" id="open-reset" title="Reset modifiche">↺</button>
+          ${state.editUnlocked
+            ? `<button class="lock-btn unlocked" id="open-reset" title="Modifica attiva · Resetta">🔓</button>`
+            : `<button class="lock-btn" id="open-lock" title="Sblocca modifiche">🔒</button>`
+          }
         </div>
       </div>
     </header>
@@ -202,7 +209,7 @@ function render() {
       </button>
     </div>
 
-    ${state.swappingDayId ? `
+    ${state.editUnlocked && state.swappingDayId ? `
     <div class="swap-banner">
       <span>↕ Tocca ⇄ su un'altra giornata per scambiare</span>
       <button class="swap-cancel-btn" data-cancelswap>Annulla</button>
@@ -216,7 +223,8 @@ function render() {
     </main>
 
     ${state.modal ? renderModal() : ''}
-    ${state.resetModal ? renderResetModal() : ''}
+    ${state.editUnlocked && state.resetModal ? renderResetModal() : ''}
+    ${state.pinModal ? renderPinModal() : ''}
   `;
 
   attachEvents();
@@ -253,7 +261,7 @@ function renderDayCard(day) {
             <span class="day-progress-mini">${done}/${acts.length}</span>
           </div>
         </div>
-        <button class="day-swap-btn${isSwapping ? ' active' : ''}" data-swapday="${day.id}" title="Scambia giornata">⇄</button>
+        ${state.editUnlocked ? `<button class="day-swap-btn${isSwapping ? ' active' : ''}" data-swapday="${day.id}" title="Scambia giornata">⇄</button>` : ''}
         <span class="day-expand-icon">▾</span>
       </div>
       <div class="activity-list">
@@ -279,7 +287,7 @@ function renderActivity(a, dayId) {
         </div>
         <div class="activity-desc">${a.desc}</div>
       </div>
-      <span class="activity-move-btn" title="Sposta" data-move="${a.id}">⇅</span>
+      ${state.editUnlocked ? `<span class="activity-move-btn" title="Sposta" data-move="${a.id}">⇅</span>` : ''}
     </div>
   `;
 }
@@ -362,6 +370,30 @@ function renderShuttleSection(actId) {
                  value="${info.luogo || ''}">
         </div>
         <button class="shuttle-save-btn" id="shuttle-save">💾 Salva info navetta</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderPinModal() {
+  const filled = state.pinValue.length;
+  const dots = Array.from({length: 6}, (_, i) =>
+    `<span class="pin-dot${i < filled ? ' pin-dot-filled' : ''}"></span>`
+  ).join('');
+  const keys = [1,2,3,4,5,6,7,8,9,null,0,'⌫'];
+  const keypad = keys.map(k => {
+    if (k === null) return `<div class="pin-key pin-key-empty"></div>`;
+    if (k === '⌫') return `<button class="pin-key pin-key-del" data-pinkey="del">⌫</button>`;
+    return `<button class="pin-key" data-pinkey="${k}">${k}</button>`;
+  }).join('');
+  return `
+    <div class="modal-backdrop" id="pin-backdrop">
+      <div class="pin-modal${state.pinError ? ' pin-shake' : ''}">
+        <div class="pin-title">🔒 Sblocca modifiche</div>
+        <div class="pin-dots">${dots}</div>
+        ${state.pinError ? `<div class="pin-error-msg">Codice errato</div>` : '<div class="pin-error-msg"></div>'}
+        <div class="pin-keypad">${keypad}</div>
+        <button class="pin-cancel-btn" id="pin-cancel">Annulla</button>
       </div>
     </div>
   `;
@@ -479,6 +511,59 @@ function renderModal() {
 
 // ─── EVENTS ───────────────────────────────────────────────────────────────────
 function attachEvents() {
+  // Lucchetto — apre PIN modal se bloccato, altrimenti apre reset modal
+  document.getElementById('open-lock')?.addEventListener('click', () => {
+    state.pinModal = true;
+    state.pinValue = '';
+    state.pinError = false;
+    render();
+  });
+
+  // PIN keypad
+  document.querySelectorAll('[data-pinkey]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.pinkey;
+      if (key === 'del') {
+        state.pinValue = state.pinValue.slice(0, -1);
+        render();
+      } else if (state.pinValue.length < 6) {
+        state.pinValue += key;
+        render();
+        if (state.pinValue.length === 6) {
+          if (state.pinValue === '130817') {
+            state.editUnlocked = true;
+            localStorage.setItem('editUnlocked', '1');
+            state.pinModal = false;
+            state.pinValue = '';
+            state.pinError = false;
+          } else {
+            state.pinError = true;
+            setTimeout(() => {
+              state.pinValue = '';
+              state.pinError = false;
+              render();
+            }, 700);
+          }
+          render();
+        }
+      }
+    });
+  });
+
+  document.getElementById('pin-cancel')?.addEventListener('click', () => {
+    state.pinModal = false;
+    state.pinValue = '';
+    state.pinError = false;
+    render();
+  });
+  document.getElementById('pin-backdrop')?.addEventListener('click', (e) => {
+    if (e.target.id === 'pin-backdrop') {
+      state.pinModal = false;
+      state.pinValue = '';
+      render();
+    }
+  });
+
   // Reset modal
   document.getElementById('open-reset')?.addEventListener('click', () => {
     state.resetModal = true;

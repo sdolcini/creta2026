@@ -571,8 +571,8 @@ body {
 
 .move-confirm-btn:hover { background: var(--aegean-md); }
 
-/* ── RESET BUTTON ─────────────────────────────── */
-.reset-btn {
+/* ── LOCK BUTTON ──────────────────────────────── */
+.lock-btn {
   background: rgba(255,255,255,0.15);
   border: none;
   border-radius: var(--radius-sm);
@@ -588,7 +588,88 @@ body {
   transition: background 0.15s;
 }
 
-.reset-btn:hover { background: rgba(255,255,255,0.28); }
+.lock-btn:hover { background: rgba(255,255,255,0.28); }
+.lock-btn.unlocked { background: rgba(255,255,255,0.12); }
+
+/* ── PIN MODAL ────────────────────────────────── */
+.pin-modal {
+  background: white;
+  border-radius: 20px;
+  padding: 28px 24px 20px;
+  width: min(320px, 90vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.pin-title {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--aegean);
+  margin-bottom: 20px;
+}
+.pin-dots {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.pin-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #dde3ea;
+  transition: background 0.15s, transform 0.15s;
+}
+.pin-dot.pin-dot-filled {
+  background: var(--aegean);
+  transform: scale(1.15);
+}
+.pin-error-msg {
+  font-size: 12px;
+  color: #e53935;
+  height: 16px;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+.pin-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 14px;
+}
+.pin-key {
+  background: #f4f6f8;
+  border: none;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  height: 58px;
+  cursor: pointer;
+  transition: background 0.12s, transform 0.08s;
+  font-family: var(--font-head);
+}
+.pin-key:active { background: #dde6ef; transform: scale(0.94); }
+.pin-key-empty { background: transparent; cursor: default; }
+.pin-key-del { font-size: 18px; color: #888; background: #eef0f2; }
+.pin-cancel-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+@keyframes pin-shake {
+  0%,100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}
+.pin-shake { animation: pin-shake 0.6s ease; }
 
 /* ── RESET MODAL OPTIONS ───────────────────────── */
 .reset-option-btn {
