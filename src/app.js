@@ -529,32 +529,43 @@ function attachEvents() {
     render();
   });
 
-  // PIN keypad
+  // PIN keypad — aggiorna i pallini direttamente nel DOM, senza re-render completo
+  function syncPinDots() {
+    document.querySelectorAll('.pin-dot').forEach((dot, i) => {
+      dot.classList.toggle('pin-dot-filled', i < state.pinValue.length);
+    });
+  }
+
   document.querySelectorAll('[data-pinkey]').forEach(btn => {
     btn.addEventListener('click', () => {
       const key = btn.dataset.pinkey;
       if (key === 'del') {
-        state.pinValue = state.pinValue.slice(0, -1);
-        render();
+        if (state.pinValue.length > 0) {
+          state.pinValue = state.pinValue.slice(0, -1);
+          syncPinDots();
+        }
       } else if (state.pinValue.length < 6) {
         state.pinValue += key;
-        render();
+        syncPinDots();
         if (state.pinValue.length === 6) {
           if (state.pinValue === '130817') {
             state.editUnlocked = true;
             localStorage.setItem('editUnlocked', '1');
             state.pinModal = false;
             state.pinValue = '';
-            state.pinError = false;
+            render();
           } else {
-            state.pinError = true;
+            const modal = document.querySelector('.pin-modal');
+            const err   = document.querySelector('.pin-error-msg');
+            if (modal) modal.classList.add('pin-shake');
+            if (err)   err.textContent = 'Codice errato';
             setTimeout(() => {
               state.pinValue = '';
-              state.pinError = false;
-              render();
+              if (modal) modal.classList.remove('pin-shake');
+              if (err)   err.textContent = '';
+              syncPinDots();
             }, 700);
           }
-          render();
         }
       }
     });
