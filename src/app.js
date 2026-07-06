@@ -193,7 +193,7 @@ function render() {
             <div class="progress-label">${done}/${total} attività</div>
           </div>
           ${state.editUnlocked
-            ? `<button class="lock-btn unlocked" id="open-reset" title="Modifica attiva · Resetta">🔓</button>`
+            ? `<button class="lock-btn unlocked" id="open-reset" title="Reset modifiche">↺</button>`
             : `<button class="lock-btn" id="open-lock" title="Sblocca modifiche">🔒</button>`
           }
         </div>
