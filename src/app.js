@@ -429,6 +429,14 @@ function renderResetModal() {
             </span>
           </button>
 
+          <button class="reset-option-btn reset-lock" id="reset-lock">
+            <span class="reset-option-icon">🔒</span>
+            <span class="reset-option-text">
+              <strong>Blocca modifiche</strong>
+              <span>Torna in modalità visualizzazione. Le modifiche restano salvate.</span>
+            </span>
+          </button>
+
           <button class="modal-done-btn is-done" id="reset-cancel" style="margin-top:8px">
             Annulla
           </button>
@@ -600,6 +608,12 @@ function attachEvents() {
     state.resetModal   = false;
     render();
     saveToFirebase();
+  });
+  document.getElementById('reset-lock')?.addEventListener('click', () => {
+    state.editUnlocked = false;
+    state.resetModal   = false;
+    localStorage.removeItem('editUnlocked');
+    render();
   });
 
   // Annulla swap

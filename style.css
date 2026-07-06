@@ -693,6 +693,8 @@ body {
 
 .reset-option-btn.reset-all { border-color: #e08080; }
 .reset-option-btn.reset-all:hover { background: #fff0f0; }
+.reset-option-btn.reset-lock { border-color: #a0b4cc; margin-top: 4px; }
+.reset-option-btn.reset-lock:hover { background: #f0f4f8; }
 
 .reset-option-icon {
   font-size: 20px;
