@@ -205,7 +205,7 @@ function render() {
         6–14 lug
       </button>
       <button class="week-tab${state.activeWeek===1?' active':''}" data-week="1">
-        15–22 lug
+        15–23 lug
       </button>
     </div>
 

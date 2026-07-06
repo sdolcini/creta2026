@@ -862,7 +862,34 @@ export const days = [
         shuttleSourceId: "d00a03"
       }
     ]
-  }
+  },
+
+  // ── GIORNO 17 — 23 lug ───────────────────────────────────────
+  {
+    id: "day17",
+    date: "2026-07-23",
+    label: "Gio",
+    title: "Ritiro Axel",
+    emoji: "🐶",
+    type: "vicino",
+    distanza: null,
+    activities: [
+      {
+        id: "d17a01",
+        name: "🐶 Ritiro Axel — Centro Cinofilo della Viola",
+        tag: "logistica",
+        desc: "Ritiro Axel dopo 16 giorni di pensione · Orari 08:00–12:00 o 15:00–18:30",
+        detail: "Centro Cinofilo della Viola, Via Giacomo Leopardi 94, 20010 Marcallo con Casone (MI). Tel: 320 708 8140. Orari di ritiro: mattina 08:00–12:00, pomeriggio 15:00–18:30. Attenzione: si rientra da Malpensa intorno all'1:00 di notte — il ritiro mattutino è improbabile. Punta alla fascia pomeridiana 15:00–18:30.",
+        tips: [
+          "Chiamare la mattina per avvisare dell'orario di ritiro previsto",
+          "Portare il guinzaglio — Axel sarà molto eccitato di rivedervi",
+          "Dopo 16 giorni potrebbe aver bisogno di reintegrazione graduale alla routine di casa"
+        ],
+        mapsUrl: "https://www.google.com/maps/dir//Via+Giacomo+Leopardi,+94,+20010+Marcallo+con+Casone+MI",
+        mapsLabel: "Centro Cinofilo della Viola"
+      }
+    ]
+  }  
 ];
 
 // ── INFO KITESURF ─────────────────────────────────────────────
